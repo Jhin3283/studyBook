@@ -105,3 +105,12 @@ NoSQL 기반의 비관계형 데이터베이스는,
 2. 1:N 관계 - 하나의 레코드가 서로 다른 여러 개의 레코드와 연결된 경우
 3. N:N 관계 - 여러 개의 레코드가 다른 테이블의 여러 개의 레코드와 관계가 있는 경우
 4. 자기참조 관계 - 테이블 내에서 관계가 있는 경우
+
+# SQL 내장함수
+GROUP BY - 데이터를 조회할 때 그룹으로 묶어서 조회 ex) SELECT * FROM customers GROUP BY State; => customers 테이블의 모든 레코드를 State에 따라 그룹화
+HAVING - GROUP BY 로 조회된 결과를 필터링 ex) SELECT CustomerId, AVG(Total) FROM invoices GROUP BY CustomerId HAVING AVG(Total) > 6.00 =>  invoices 테이블을 CustomerId로 그룹화하고 그 평균이 6을 초과한 결과를 조회
+COUNT() - 레코드의 개수를 헤아릴 때 사용 ex) SELECT State, COUNT(*) FROM customers GROUP BY State; => 각 State에 해당하는 레코드의 개수를 확인
+SUM() - 레코드의 합을 리턴 ex) SELECT InvoiceId, SUM(UnitPrice) FROM invoice_items GROUP BY InvoiceId; => invoice_items 테이블에서 InvoiceId 필드를 기준으로 그룹하고, UnitPrice 필드 값의 합을 구함
+AVG() - 레코드의 평균값을 계산하는 함수 ex) SELECT TrackId, AVG(UnitPrice) FROM invoice_items GROUP BY TrackId; => invoice_items 테이블에서  TrackId 필드를 기준으로 그룹하고, UnitPrice 필드 값의 평균을 구함
+MAX(), MIN() - 레코드의 최댓값과 최솟값을 리턴 
+SELECT 실행 순서 FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
