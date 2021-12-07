@@ -29,3 +29,38 @@ SPA의 단점
 2.  HTML 파일에 자료가 거의 없기때문에, 검색 엔진 최적화가 안 좋음.
 
 # React Router
+라우팅(Routing) - 다른 주소에 따라 다른 뷰를 보여주는 과정(경로에 따라 변경)
+React Router 주요 컴포넌트
+1. BrowserRouter - 라우터 역활
+2. Switch,Route - 경로 매칭하는 역활
+3. Link - 경로 변경하는 역활
+- 컴포넌트 사용위해 React Router 라이브러리 불러와야함 - `import {BrowserRouter,Switch,Route,Link} from "react-router-dom";``
+
+# Props
+props - 변하지 않는 외부에서 전달받은 값
+props 특징
+1. 컴포넌트의 속성을 의미 - 웹 어플에서 해당 컴포넌트 가진 속성에 해당
+2. 부모(상위) 컴포넌트로부터 전달받은 값
+3. 객체 형태
+4. 읽기 전용
+props 사용방법
+1. 하위 컴포넌트에 전달할 값과 속성 정의
+2. props 이용하여 정의된 값과 속성 전달
+3. 전달받은 props 렌더링
+다른 방법
+- 여는 태그와 닫는 태그 사이에 value 넣어서 전달하고, `props.children`을 이용해 해당 value에 접근하여 사용
+
+# State
+state - 컴포넌트 내부에서 변할수 있는 값
+useState 사용법
+1. React에서 `useState`부름 - `import {useState} from "react";`
+2. `useState`를 컴포넌트 안에서 호출 - `const [state 저장 변수, state 갱신 함수] = useState(상태 초기 값);` 
+state 갱신
+- state 갱신을 위해 `state 갱신 함수`를 호출
+주의 사항
+- React 컴포넌트는 state가 변경되면 새롭게 호출되고, 리렌더링 됨. React state는 상태 변경 함수 호출로 변경해야하고, 강제로 변경시, 리렌더링 되지 않거나, state가 변경되지 않음.
+
+# React 데이터 흐름
+React는 상향식(bottom-up)으로 앱을 만드는데, 테스트가 쉽고 확장성이 좋다는 장점이 있음.
+- React는 단방향 데이터 흐름을 따름
+- 데이터를 전달하는 주체는 부모 컴포넌트가 되는데, 이는 데이터 흐름이 하향식(top-down)임을 의미함
