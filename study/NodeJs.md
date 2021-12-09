@@ -186,3 +186,7 @@ Human -> `.prototype` -> Human.prototype.sleep -> `new Human();(instance)` -> st
 steve.sleep -> `.__proto__`-> Human.prototype.sleep -> `.constructor`-> Human
 프로토타입 체인 - 부모 역할을 하는 프로토타입 객체의 프로퍼티나 메소드를 차례로 검색하는 것. 객체 지향 프로그래밍의 특성 중 상속을 JavaScript에서 구현할 때 사용함. 다른 객체에 정의된 속성과 메소드를 한 객체에서 사용함의 근간.
 상속 - 속성과 메소드를 물려주는 클래스(부모 클래스)와 받는 클래스(자식 클래스) 이 과정을 말함. JavaScript에서는 extends와 super 키워드로 상속 구현.
+
+# 비동기
+callback - 다른 함수A의 전달인자로 받는 함수B
+비동기 - parameter를 넘겨받는 함수A는 callback 함수 B를 즉시 실행(synchronously)할수 있고, 나중에 실행((asynchronously)) 할수있음 이때, 나중에 실행하는 것이 비동기 임. ex) sync - 하던일을 멈추고 해야함(전화) => 요청과 동시에 결과가 동시에 일어남.  <=> async - 나중에 해도됨(문자) => 요청의 결과가 동시에 일어나지 않음.
