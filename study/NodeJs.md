@@ -180,3 +180,9 @@ this - 인스턴스 객체를 의미. 만들어진 객체에 해당 속성을 �
 
 # 프로토타입
 프로토타입 - 원형 객체
+- JavaScript는 객체를 상속하기 위해 프로토타입 방식을 사용. JavaScript는 프로토타입 기반 언어이고, 모든 객체들이 메소드와 속성을 상속받기 위해 프로토타입 객체를 가짐.
+- ex) Human이라는 클래스와 인스턴스가 있을때, 
+Human -> `.prototype` -> Human.prototype.sleep -> `new Human();(instance)` -> steve.sleep
+steve.sleep -> `.__proto__`-> Human.prototype.sleep -> `.constructor`-> Human
+프로토타입 체인 - 부모 역할을 하는 프로토타입 객체의 프로퍼티나 메소드를 차례로 검색하는 것. 객체 지향 프로그래밍의 특성 중 상속을 JavaScript에서 구현할 때 사용함. 다른 객체에 정의된 속성과 메소드를 한 객체에서 사용함의 근간.
+상속 - 속성과 메소드를 물려주는 클래스(부모 클래스)와 받는 클래스(자식 클래스) 이 과정을 말함. JavaScript에서는 extends와 super 키워드로 상속 구현.
