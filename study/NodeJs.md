@@ -190,4 +190,3 @@ steve.sleep -> `.__proto__`-> Human.prototype.sleep -> `.constructor`-> Human
 # 비동기
 callback - 다른 함수A의 전달인자로 받는 함수B
 비동기 - parameter를 넘겨받는 함수A는 callback 함수 B를 즉시 실행(synchronously)할수 있고, 나중에 실행((asynchronously)) 할수있음 이때, 나중에 실행하는 것이 비동기 임. ex) sync - 하던일을 멈추고 해야함(전화) => 요청과 동시에 결과가 동시에 일어남.  <=> async - 나중에 해도됨(문자) => 요청의 결과가 동시에 일어나지 않음.
-async로 순서제어 하는법
