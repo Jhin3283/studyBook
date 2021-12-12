@@ -190,3 +190,11 @@ steve.sleep -> `.__proto__`-> Human.prototype.sleep -> `.constructor`-> Human
 # 비동기
 callback - 다른 함수A의 전달인자로 받는 함수B
 비동기 - parameter를 넘겨받는 함수A는 callback 함수 B를 즉시 실행(synchronously)할수 있고, 나중에 실행((asynchronously)) 할수있음 이때, 나중에 실행하는 것이 비동기 임. ex) sync - 하던일을 멈추고 해야함(전화) => 요청과 동시에 결과가 동시에 일어남.  <=> async - 나중에 해도됨(문자) => 요청의 결과가 동시에 일어나지 않음.
+- async의 순서제어를 callback을 이용해서 함.
+- Promise에서 `.then`을 이용해서 순서제어가 가능하고, `.catch`를 통해 에러를 잡을수 있음.
+- Promise에서 async/await로 비동기 처리 가능.
+
+# 타이머 API
+setTimeout(callback, millisecond) - 일정시간 후 함수 실행. arguments: 콜백함수, 콜백함수 실행 전 기다려야 할 시간. return value: 임의의 타이머ID
+setInterval(callback, millisecond) - 일정시간의 간격을 가지고 함수를 반복적으로 실행. arguments: 콜백함수, 반복적으로 함수를 실행시키는 시간 간격. return value: 임의의 타이머ID
+clearInerval(timerId) - 반복 실행중인 타이머를 종료. arguments: timerId. return value: 없음.
