@@ -33,3 +33,12 @@ PORT - IP주소가 가리키는 PC에 접속할 수 있는 통로(채널)
 # 도메인과 DNS
 Domain name - IP주소를 대신해 사용하는 주소. 모든PC는 IP주소가 있지만, 도메인 이름을 가지는것은 아님.
 DNS - 호스트의 도메인 주소를 IP주소로 변환하거나 반대의 경우를 수행하는 데이터베이스 시스템
+# HTTP
+HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 방식
+- HTTP message 유형은 요청(Requests)과 응답(Responses) 두 가지 유형이 있음.
+- 요청과 응답의 유사한 구조
+1. start line - 요청이나 응답의 상태를 나타냄. 항상 첫줄에 위치하고, 응답에서는 status line이라 부름
+2. HTTP headers - 요청을 지정하거나, 메시지에 포함된 본문을 설명하는 헤더의 집합
+3. empty line - 헤더와 본문을 구분하는 빈줄
+4. body - 요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함. 요청과 응답의 유형에 따라 선택적 사용
+- start line과 HTTP headers를 묶어 요청혹은 응답의 헤드라고 하고, payload는 body라고 함.
