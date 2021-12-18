@@ -42,3 +42,8 @@ HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 
 3. empty line - 헤더와 본문을 구분하는 빈줄
 4. body - 요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함. 요청과 응답의 유형에 따라 선택적 사용
 - start line과 HTTP headers를 묶어 요청혹은 응답의 헤드라고 하고, payload는 body라고 함.
+# 요청(Requests)
+- start line의 세 가지 요소
+1. 수행할 작업(GET, PUT, POST등)이나 방식(HEAD or OPTIONS)를 설명하는 HTTP method를 나타냄
+2. 요청 대상 또는 프로토콜 포트 도메인의 절대 경로는 요청 컨텍스트에 작성. 요청 형식은 hTTP method마다 다름
++ origin형식 : 
