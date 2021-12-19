@@ -46,4 +46,4 @@ HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 
 - start line의 세 가지 요소
 1. 수행할 작업(GET, PUT, POST등)이나 방식(HEAD or OPTIONS)를 설명하는 HTTP method를 나타냄
 2. 요청 대상 또는 프로토콜 포트 도메인의 절대 경로는 요청 컨텍스트에 작성. 요청 형식은 hTTP method마다 다름
-+ origin형식 : 
++ origin형식 : `?`와 쿼리 문자열이 붙는 절대 경로
