@@ -42,8 +42,30 @@ HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 
 3. empty line - 헤더와 본문을 구분하는 빈줄
 4. body - 요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함. 요청과 응답의 유형에 따라 선택적 사용
 - start line과 HTTP headers를 묶어 요청혹은 응답의 헤드라고 하고, payload는 body라고 함.
+- HTTP의 가장 큰 특징은 Stateless(무상태성)이다. 
 # 요청(Requests)
 - start line의 세 가지 요소
 1. 수행할 작업(GET, PUT, POST등)이나 방식(HEAD or OPTIONS)를 설명하는 HTTP method를 나타냄
-2. 요청 대상 또는 프로토콜 포트 도메인의 절대 경로는 요청 컨텍스트에 작성. 요청 형식은 hTTP method마다 다름
-+ origin형식 : `?`와 쿼리 문자열이 붙는 절대 경로
+2. 요청 대상 또는 프로토콜, 포트, 도메인의 절대 경로는 요청 컨텍스트에 작성. 요청 형식은 hTTP method마다 다름
++ origin 형식 : `?`와 쿼리 문자열이 붙는 절대 경로임. POST, GET, HEAD, OPTIONS등의 메소드와 함께 사용. ex)`POST / HTTP 1.1`
++ absolute 형식 : 완전한 URL 형식 프록시에 연결하는 경우 대부분 GET method와 함께 사용. ex) `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/MessagesHTTP/1.1`
++ authority 형식 : 도메인 이름과 포트 번호로 이루어진 URL의 authority component임. HTTP 터널 구축시, CONNECT와 함께 사용. ex) `CONNECT developer.mozilla.org:80 HTTP/1.1``
++ asterisk 형식 : OPTIONS와 함께 별표(*) 하나로 서버 전체를 표현. ex) `OPTIONS * HTTP/1.1``
+3. HTTP 버전에 따라 HTTP message의 구조가 달라지기 때문에, start line에 HTTP 버전을 함께 입력함.
+- Headers -> 요청의 Headers는 기본 구조를 따름. 헤더 이름(대소문자 구분이 없는 문자열),콜론(:),값을 입력하고, 값은 헤더에 따라 다름.
++ General headers : 메시지 전체에 적용되는 헤더로, body를 통해 전송되는 데이터와는 관련없는 헤더임.
++ Request headers : fetch를 통해 가져올 리소스나 클라이언트 자체에 대한 자세한 정보를 포함하는 헤더
++ Representation headers : body에 담긴 리소스의 정보(컨텐츠 길이, MiME 타입 등)를 포함하는 헤더
+- Body -> 요청의 본문은 HTTP messages 구조의 마지막에 위치함. 모든요청에 body가 필요하지는 않음. GET,HEAD,DELETE,OPTIONS처럼 서버에 리소스 요청하는 경우 본문이 필요하지 않음. POST, PUT과 같은 일부 요청은 데이터를 업데이트하기 위해 사용.
++ Single-resource bodies : 헤더 두개로 정의된 단일 파일로 구성
++ Multiple-resource bodies : 여러 파트로 구성된 본문에서는 각 파트마다 다른 정보를 지님.
+
+# 응답(Responses)
+- Status line -> 응답의 첫줄을 말하며, 현재 프로토콜의 버전, 상태 코드(요청의 결과), 상태 텍스트(상태 코드설명)등의 정보를 포함.
+- Headers -> 응답의 HTTP headers는 요청 헤더와 동일한 구조를 가짐.
+- Body -> 응답의 본문은 HTTP messages 구조의 마지막에 위치. 모든 응답에 body가 필요하지 않음.
+- 응답의 body의 두종류
+1. Single-resource bodies : 길이가 알려진 단일-리소스 본문은 두 개의 헤도로 정의하고, 길이를 모를경우, Transfer-Encoding이 chunked로 설정되어 있으며, 파일은 chunk로 나뉘어 인코딩 되어 있음.
+2. Multiple-resource bodies : 서로 다른 정보를 담고 있는 body
+# AJAX
+AJAX - JavaScript,DOM,Fetch,XMLHttpReqest,HTML등 다양한 기술을 사용하는 웹 개발 기법. 가장 큰 특징은 웹 페이지에 필요한 부분에 필요한 데이터만 비동기적으로 받아옴.
