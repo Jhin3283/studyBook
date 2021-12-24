@@ -15,6 +15,7 @@
 8. TCP - HTTP,FTP 통신의 근간이 되는 인터넷 프로토콜
 9. UDP - 양방향TCP와 다르게 단방향으로 작동하는 단순하고 빠르지만, 신리성이 낮은 인터넷 프로토콜
 API - 서버에서 클라이언트에게 리소스를 잘 활용할수 있도록 제공하는 인터페이스
+
 # URL과 URI
 URL - 네트워크 상에서 웹페이지, 이미지, 동영상 등의 파일이 위치한 정보를 나타냄. URL은 scheme, hosts, url-path로 구분.
 scheme - 통신 방식(프로토콜)을 결정. 일반적으로 http(s)
@@ -23,6 +24,7 @@ url-path - 웹 서버에서 지정한 루트 디렉토리부터 시작하는 웹
 URI - URL의 기본요소 scheme, hosts, url-path에 더해 query, bookmark를 포함.
 query - 웹 서버에 보내는 추가적인 질문
 - 브라우저 검색창에 나타나는 주소가 URI이고, URL을 포함하는 상위개념임.
+
 # IP와 PORT
 IP - 인터넷상에서 사용하는 주소체계. 네덩이의 숫자로 구분되는 IP주소체계를 IPv4라고 하고, `nslookup URL`를 이용해서 IP주소 확인가능.
 PORT - IP주소가 가리키는 PC에 접속할 수 있는 통로(채널)
@@ -30,9 +32,11 @@ PORT - IP주소가 가리키는 PC에 접속할 수 있는 통로(채널)
 22 : SSH
 80 : HTTP
 443 : HTTPS
+
 # 도메인과 DNS
 Domain name - IP주소를 대신해 사용하는 주소. 모든PC는 IP주소가 있지만, 도메인 이름을 가지는것은 아님.
 DNS - 호스트의 도메인 주소를 IP주소로 변환하거나 반대의 경우를 수행하는 데이터베이스 시스템
+
 # HTTP
 HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 방식
 - HTTP message 유형은 요청(Requests)과 응답(Responses) 두 가지 유형이 있음.
@@ -43,6 +47,7 @@ HTTP Message - 클라이언트와 서버 사이에서 데이터가 교환되는 
 4. body - 요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함. 요청과 응답의 유형에 따라 선택적 사용
 - start line과 HTTP headers를 묶어 요청혹은 응답의 헤드라고 하고, payload는 body라고 함.
 - HTTP의 가장 큰 특징은 Stateless(무상태성)이다. 
+
 # 요청(Requests)
 - start line의 세 가지 요소
 1. 수행할 작업(GET, PUT, POST등)이나 방식(HEAD or OPTIONS)를 설명하는 HTTP method를 나타냄
@@ -95,3 +100,5 @@ CSR 사용하는 경우
 3. 웹 어플리켕션을 제작하는 경우
 
 # CORS
+CORS - 처음 전송되는 리소스의 도메인과 다른 도메인으로부터 리소스가 요청될 경우 해당 리소스는 cross-origin HTTP 요청에 의해 요청됨.
+adf
