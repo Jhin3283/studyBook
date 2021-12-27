@@ -101,4 +101,4 @@ CSR 사용하는 경우
 
 # CORS
 CORS - 처음 전송되는 리소스의 도메인과 다른 도메인으로부터 리소스가 요청될 경우 해당 리소스는 cross-origin HTTP 요청에 의해 요청됨.
-Cors정리
+cors
