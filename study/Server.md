@@ -101,4 +101,5 @@ CSR 사용하는 경우
 
 # CORS
 CORS - 처음 전송되는 리소스의 도메인과 다른 도메인으로부터 리소스가 요청될 경우 해당 리소스는 cross-origin HTTP 요청에 의해 요청됨.
-cors
+# REST API
+Rest API - 웹에서 사용되는 데이터나 자원을 HTTP URI로 표현하고, HTTP프로토콜을 통해 요청과 응답을 정의하는 방식
