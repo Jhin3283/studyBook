@@ -25,3 +25,20 @@ function solution(n, times) {
   return result;
 }
 ```
+
+디스크 컨트롤러
+
+```
+function solution(jobs) {
+    jobs.sort(function(a,b){
+        return a[1] - b[1]
+    })
+    let count = jobs[0][1]
+    let result = count;
+    for (let i=1; i<jobs.length; i++){
+        count += jobs[i][1]
+        result += count - jobs[i][0]
+    }
+     return Math.floor(result/jobs.length)
+}
+```
