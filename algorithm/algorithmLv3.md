@@ -31,7 +31,7 @@ function solution(n, times) {
 ```
 function solution(jobs) {
     jobs.sort(function(a,b){
-        return a[1] - b[1]
+        return a - b
     })
     let count = jobs[0][1]
     let result = count;
