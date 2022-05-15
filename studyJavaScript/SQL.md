@@ -134,3 +134,5 @@ SUM() - 레코드의 합을 리턴 ex) SELECT InvoiceId, SUM(UnitPrice) FROM inv
 AVG() - 레코드의 평균값을 계산하는 함수 ex) SELECT TrackId, AVG(UnitPrice) FROM invoice_items GROUP BY TrackId; => invoice_items 테이블에서 TrackId 필드를 기준으로 그룹하고, UnitPrice 필드 값의 평균을 구함
 MAX(), MIN() - 레코드의 최댓값과 최솟값을 리턴
 SELECT 실행 순서 FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
+
+s
