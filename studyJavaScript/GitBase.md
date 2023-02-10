@@ -8,5 +8,6 @@ Git repository 는 Remote Repository와 Local Repository 두 종류의 저장소
 fork => git clone => 수정 => git add => git commit => git push
 git add <파일명> || .(모든파일) 가능
 git commit -m '메세지' 로 변경내용 커밋 가능
+
 # 함께 작업할 경우
 git remote add origin <Repository 주소> => git remote add pair <Repository 주소> => git remote -v : Local Repository와 연결된 모든 Remote Repository확인) => git pull pair <branch> => 수정 => git add => git commit => git push
