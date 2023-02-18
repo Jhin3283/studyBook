@@ -134,3 +134,47 @@ SUM() - 레코드의 합을 리턴 ex) SELECT InvoiceId, SUM(UnitPrice) FROM inv
 AVG() - 레코드의 평균값을 계산하는 함수 ex) SELECT TrackId, AVG(UnitPrice) FROM invoice_items GROUP BY TrackId; => invoice_items 테이블에서 TrackId 필드를 기준으로 그룹하고, UnitPrice 필드 값의 평균을 구함
 MAX(), MIN() - 레코드의 최댓값과 최솟값을 리턴
 SELECT 실행 순서 FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
+
+# MySQL
+
+## Service Mysql
+시작 – service mysql start
+재시작 – service mysql restart
+정지 – service mysql stop
+상태확인 – service mysql status
+
+## 유저 관리
+
+### 접속
+mysql -u root -p 
+
+### 인증모드 확인
+SELECT user,plugin,host FROM mysql.user;
+
+### 비밀번호 변경
+update user set password=PASSWORD('변경할 비밀번호') where user='root';
+
+### 삭제
+delete from user where user='root';
+flush privileges;
+
+### 생성
+create user 'root'@'localhost' identified by 'password';
+
+### DB의 권한 부여
+grant all privileges on DB명.* to 'root'@'localhost';
+
+### 계정권한 확인
+show grants for 'root'@'localhost';
+
+## sql_mode
+
+### 조회
+select @@sql_mode;
+
+### 수정
+set @@session.sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+set @@sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+set @@global.sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
