@@ -209,4 +209,3 @@ delete from <table명> where (조건);
 
 ### left join
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건>
-
