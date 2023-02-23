@@ -188,6 +188,11 @@ set @@sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIV
 
 set @@global.sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
+## database
+
+### table명 변경
+rename table <table명> to <바꿀table명>
+
 ## CRUD
 
 ### Create
@@ -201,3 +206,7 @@ update <table명> set (colum = value) where (조건);
 
 ### delete
 delete from <table명> where (조건);
+
+### left join
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건>
+
