@@ -219,3 +219,9 @@ select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <ta
 ### inner join
 왼쪽 오른쪽 모두 존재하는 데이터만 출력
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left inner join <table명> on <합성 조건> where (조건)
+
+### full outer join
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> union [disctinct] right join <table명> on <합성 조건> where (조건)
+
+### exclusive join
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> where (조건 = null)
