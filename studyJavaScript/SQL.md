@@ -207,5 +207,15 @@ update <table명> set (colum = value) where (조건);
 ### delete
 delete from <table명> where (조건);
 
-### left join
-select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건>
+### left outer join
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> where (조건)
+
+### left outer join 여러개
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> left join <table명> on <합성 조건> where (조건)
+
+### left right 차이
+기준이 왼쪽 table인지 오른쪽 기준인지 차이
+
+### inner join
+왼쪽 오른쪽 모두 존재하는 데이터만 출력
+select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left inner join <table명> on <합성 조건> where (조건)
