@@ -31,3 +31,17 @@ for(int i=1; i<=10; i++){ }
 
 ## method
 [returnType] [nameOfMethod](){ }
+
+## JVM, JDK, JRE
+
+### JVM
+Java Virtual Machine
+byte Code를 OS맞춰 변환
+
+### JRE
+Java Runtime Environment
+Libraries + Other Components + JVM
+
+### JDK
+Java Developer Kit
+JRE + Compilers + Debuggers
