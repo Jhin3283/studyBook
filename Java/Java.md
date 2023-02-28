@@ -79,3 +79,29 @@ do { 실핼될 사항 } while (반복될 조건)
 - while문과 차이는 코드가 한번이라도 실행되는지의 여부에 따라 다름
 
 ## break continue
+javascript와 동일 반복문 break Or continue
+
+## 참조 자료형
+Class가 참조 자료형 Class는 Heap으로 참조형 저장되며, Class내 참조 변수는 stack으로 Class정보를 포함하여 쌓이게 됨.
+
+## String
+특정위치 조회 - str.chartAt(index)
+문자열 자르기 - str.substring(index,index)
+문자열 길이 - str.length()
+문자 인덱스 찾기 - str.indexOf(특정문자)
+문자 인덱스 찾기 뒤에서부터 - str.lastIndexOf(특정문자)
+문자 포함 여부 - str.contains(특정문자)
+문자열 시작여부 - str.startsWith(특정문자)
+문자열 끝여부 - str.endsWith(특정문자)
+비어있는지 여부 - str.isEmpty()
+문자열 비교 - str.equals(특정문자)
+문자열 비교 대소문자 구분X - str.equalsIgnoreCase(특정문자)
+문자열 합치기 - str.concat(합칠 문자)
+문자열 대문자 - str.toUpperCase()
+문자열 소문자 - str.toLowerCase()
+문자열 공백없애기 - str.trim()
+문자열 사이에 추가 - String.join(",", "A", "B", "C")
+문자열 변경 - str.replace("a","z")
+
+## StringBuffer
+기존 String은 수정 불가 StringBuffer는 수정 가능
