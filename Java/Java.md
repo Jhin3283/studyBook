@@ -133,3 +133,14 @@ i3 == i4 //true
 ## 일급 컬랙션
 콜렉션을 wrapping 할 때, 그 외의 다른 멤버 변수가 없는 상태
 Collection들을 한번 Wrapping 한 컬렉션
+
+## Date
+LocalDate today = LocalDate.now()
+today.getYear()
+LocalDate.of(특정 년,월,일)
+today.withYear(특정 년)
+today.withDayOfMonth(특정 일)
+today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 판별 가능
+
+## Eclipse 팁
+이클립스에서 지원 메소드 확인 Ctrl(Command) + O
