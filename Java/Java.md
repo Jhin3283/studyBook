@@ -72,3 +72,10 @@ OOP - Object-oriented programming의 약자로 절차 지향 프로그래밍과 
 4. 다형성 - 다양한 형태를 가질수 있는 것
 
 - 장점: 동일한 메소드에 대해 if/else if와 같은 조건문 대신 객체의 특성에 맞게 작성 가능
+
+## do while loop
+do { 실핼될 사항 } while (반복될 조건)
+
+- while문과 차이는 코드가 한번이라도 실행되는지의 여부에 따라 다름
+
+## break continue
