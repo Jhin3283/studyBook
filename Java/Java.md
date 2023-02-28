@@ -105,3 +105,31 @@ Class가 참조 자료형 Class는 Heap으로 참조형 저장되며, Class내 �
 
 ## StringBuffer
 기존 String은 수정 불가 StringBuffer는 수정 가능
+
+## StringBuilder
+멀티스레딩으로 StringBuffer와 차이
+
+## Wrapper Classes
+자바 API 클래스중 하나
+기존 타입의 데이터를 객체로 취급
+
+기본 타입 || 래퍼 클래스
+byte || Byte
+short || Short
+int || Integer
+ling || Long
+float || Float
+double || Double
+char || Character
+boolean || Boolean
+
+Integer i1 = new Integer(5)
+Integer i2 = new Integer(5)
+i1 == i2 //false
+Integer i3 = Integer.valueOf(5)
+Integer i4 = Integer.valueOf(5)
+i3 == i4 //true
+
+## 일급 컬랙션
+콜렉션을 wrapping 할 때, 그 외의 다른 멤버 변수가 없는 상태
+Collection들을 한번 Wrapping 한 컬렉션
