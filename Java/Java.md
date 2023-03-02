@@ -147,6 +147,7 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 ## Eclipse 팁
 이클립스에서 지원 메소드 확인 Ctrl(Command) + O
 빠른수정 Ctrl(Command) + 1
+생성자 Alt(Command) + Shift(Option) + S
 
 ## Array, ArrayList
 Array - int[] makrs = {1,2,3}
@@ -155,3 +156,11 @@ toString - Arrays.toString(marks)
 fill - Arrays.fill(marks,100)
 equals - Arrays.equals(array1, array2)
 sort - Arrays.sort(makrs)
+
+## 소수점 연산
+new BigDecimal(sum).divide(new BigDecimal(number),표현할 자리(3), RoundingMode.반올림여부(UP, DOWN))
+
+## 가변적 매개변수
+function (int... values)
+넣는 만큼 배열 변수로 사용 가능, 가변 인수는 선언시 제일 마지막에 배치
+
