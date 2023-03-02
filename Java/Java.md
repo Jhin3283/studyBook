@@ -186,4 +186,13 @@ String.format("1st - %s(string), 2st - %f(float), 3st - %b(boolean), 4st - %d(de
 
 ## 상속 (IS A)
 상속관계 클래스 선언 - public class Student extends Person { } => Student (IS A 관계) Person
+상속시 상위 클래스 먼저 실행됨
+클래스에 변수로 지정하여 필수값을 만들수 있고, 초기값 지정 가능
 
+## class 관계 확인
+AClass instanceof BClass
+
+## 추상 클래스
+abstract class class명 { }
+추상 메소드 - abstract public void 메소드명()\
+추상 메소드는 정의, 형태 없는 메소드 Only 정의
