@@ -149,7 +149,7 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 빠른수정 Ctrl(Command) + 1
 생성자 Alt(Command) + Shift(Option) + S
 
-## Array, ArrayList
+## Array
 Array - int[] makrs = {1,2,3}
 int[] marks = new int[5] // int[5] {0,0,0,0,0}
 toString - Arrays.toString(marks)
@@ -164,3 +164,9 @@ new BigDecimal(sum).divide(new BigDecimal(number),표현할 자리(3), RoundingM
 function (int... values)
 넣는 만큼 배열 변수로 사용 가능, 가변 인수는 선언시 제일 마지막에 배치
 
+## ArrayList
+선언 - ArrayList arrayList = new ArrayList()
+타입선언 - ArrayList<String> items = new ArrayList<String>
+추가 - arrayList.add("추가요소")
+삭제 - arrayList.remove("삭제요소")
+크기 - arrayList.size()
