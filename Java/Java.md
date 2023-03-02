@@ -200,7 +200,7 @@ abstract class class명 { }
 ## 인터페이스
 public interface A{ }
 public class B implements A { }
-다형성을 지원 - A test = new B(); 지원하며 인터페이스를 기준으로 Class 전환가능
+다형성(같은 코드가 다른 반응)을 지원 - A test = new B(); 지원하며 인터페이스를 기준으로 Class 전환가능
 인터페이스 끼리는 연장 가능. 클래스 -> 인터페이스 불가.
 추상 클래스를 생성하여 인터페이스의 필요한 메소드만 이용가능.
 인터페이스 내 상수가능 변수는 불가.
