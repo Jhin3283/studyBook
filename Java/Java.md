@@ -196,3 +196,13 @@ AClass instanceof BClass
 abstract class class명 { }
 추상 메소드 - abstract public void 메소드명()\
 추상 메소드는 정의, 형태 없는 메소드 Only 정의
+
+## 인터페이스
+public interface A{ }
+public class B implements A { }
+다형성을 지원 - A test = new B(); 지원하며 인터페이스를 기준으로 Class 전환가능
+인터페이스 끼리는 연장 가능. 클래스 -> 인터페이스 불가.
+추상 클래스를 생성하여 인터페이스의 필요한 메소드만 이용가능.
+인터페이스 내 상수가능 변수는 불가.
+메소드 앞에 default 추가하여 컴파일 에러 방지가능
+추상클래스와의 차이점 - 1. 인터페이스는 폐쇄형 선언 , 변수 설정 불가. 2. 한 클래스는 여러 인터페이스 구현. 3. 한 클래스는 여러 추상적 클래스 연장 불가.
