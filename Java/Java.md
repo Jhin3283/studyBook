@@ -28,6 +28,8 @@ System.out.printf(찍고 싶은거).println()
 
 ## for 반복문
 for(int i=1; i<=10; i++){ }
+배열 반복문
+for(int mark:makrs){ }
 
 ## method
 [returnType] [nameOfMethod](){ }
@@ -144,3 +146,12 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 
 ## Eclipse 팁
 이클립스에서 지원 메소드 확인 Ctrl(Command) + O
+빠른수정 Ctrl(Command) + 1
+
+## Array, ArrayList
+Array - int[] makrs = {1,2,3}
+int[] marks = new int[5] // int[5] {0,0,0,0,0}
+toString - Arrays.toString(marks)
+fill - Arrays.fill(marks,100)
+equals - Arrays.equals(array1, array2)
+sort - Arrays.sort(makrs)
