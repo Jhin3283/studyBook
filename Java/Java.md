@@ -148,6 +148,8 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 이클립스에서 지원 메소드 확인 Ctrl(Command) + O
 빠른수정 Ctrl(Command) + 1
 생성자 Alt(Command) + Shift(Option) + S
+찾아가기 (VSCode F12기능) - Ctrl + Alt + H
+코드 추천 - Ctrl + Space
 
 ## Array
 Array - int[] makrs = {1,2,3}
@@ -159,6 +161,7 @@ sort - Arrays.sort(makrs)
 
 ## 소수점 연산
 new BigDecimal(sum).divide(new BigDecimal(number),표현할 자리(3), RoundingMode.반올림여부(UP, DOWN))
+계산필요 O - BigDecimal 계산필요 X - double
 
 ## 가변적 매개변수
 function (int... values)
@@ -170,3 +173,17 @@ function (int... values)
 추가 - arrayList.add("추가요소")
 삭제 - arrayList.remove("삭제요소")
 크기 - arrayList.size()
+최대값 - Collections.max(arrayList)
+최소값 - Collections.min(arrayList)
+
+## 클래스 설계
+1. state - 클래스의 상태 맴버 변수
+2. constructors - 어떤 생성자가 구성될지
+3. behavior - 어떠한 행동을 할지 함수
+
+## String.format
+String.format("1st - %s(string), 2st - %f(float), 3st - %b(boolean), 4st - %d(decimal)", 1stData, 2stData, 3stData, 4stData)
+
+## 상속 (IS A)
+상속관계 클래스 선언 - public class Student extends Person { } => Student (IS A 관계) Person
+
