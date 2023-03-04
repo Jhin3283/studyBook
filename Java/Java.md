@@ -32,7 +32,7 @@ for(int i=1; i<=10; i++){ }
 for(int mark:makrs){ }
 
 ## method
-[returnType]  ([nameOfMethod](){ })
+[returnType]  // nameOfMethod(){ }
 
 ## JVM, JDK, JRE
 
