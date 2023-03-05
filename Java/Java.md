@@ -3,20 +3,24 @@
 java Source code (compile)-> Java Application Bytecode (Run)-> Java Virtual Machine (Run)-> computer OS
 
 ### console 찍는법
+
 System.out.println(찍고 싶은거)
 println = print line
 System.out.printf(찍고 싶은거).println()
 %d 는 printf의 뒤의 변수를 값으로 넣을수 있음
 
 ## 변수 저장 과정
+
 메모리 위치에 변수명이 Name으로 정해지고 Value에 값이 저장됨
 
 ## 변수이름 정하는 규칙
+
 1. 숫자로 시작 X
 2. Camel case
-3. "-" 대신 "_" 사용
+3. "-" 대신 "\_" 사용
 
 ## 데이터 타입
+
 1. 정수(32 bits) int
 2. 8 bits byte
 3. 16 bits short
@@ -27,24 +31,29 @@ System.out.printf(찍고 싶은거).println()
 8. boolean (true, false)
 
 ## for 반복문
+
 for(int i=1; i<=10; i++){ }
 배열 반복문
 for(int mark:makrs){ }
 
 ## method
-[returnType]  // nameOfMethod(){ }
+
+[returnType] // nameOfMethod(){ }
 
 ## JVM, JDK, JRE
 
 ### JVM
+
 Java Virtual Machine
 byte Code를 OS맞춰 변환
 
 ### JRE
+
 Java Runtime Environment
 Libraries + Other Components + JVM
 
 ### JDK
+
 Java Developer Kit
 JRE + Compilers + Debuggers
 
@@ -76,17 +85,21 @@ OOP - Object-oriented programming의 약자로 절차 지향 프로그래밍과 
 - 장점: 동일한 메소드에 대해 if/else if와 같은 조건문 대신 객체의 특성에 맞게 작성 가능
 
 ## do while loop
+
 do { 실핼될 사항 } while (반복될 조건)
 
 - while문과 차이는 코드가 한번이라도 실행되는지의 여부에 따라 다름
 
 ## break continue
+
 javascript와 동일 반복문 break Or continue
 
 ## 참조 자료형
+
 Class가 참조 자료형 Class는 Heap으로 참조형 저장되며, Class내 참조 변수는 stack으로 Class정보를 포함하여 쌓이게 됨.
 
 ## String
+
 특정위치 조회 - str.chartAt(index)
 문자열 자르기 - str.substring(index,index)
 문자열 길이 - str.length()
@@ -106,12 +119,15 @@ Class가 참조 자료형 Class는 Heap으로 참조형 저장되며, Class내 �
 문자열 변경 - str.replace("a","z")
 
 ## StringBuffer
+
 기존 String은 수정 불가 StringBuffer는 수정 가능
 
 ## StringBuilder
+
 멀티스레딩으로 StringBuffer와 차이
 
 ## Wrapper Classes
+
 자바 API 클래스중 하나
 기존 타입의 데이터를 객체로 취급
 
@@ -133,10 +149,12 @@ Integer i4 = Integer.valueOf(5)
 i3 == i4 //true
 
 ## 일급 컬랙션
+
 콜렉션을 wrapping 할 때, 그 외의 다른 멤버 변수가 없는 상태
 Collection들을 한번 Wrapping 한 컬렉션
 
 ## Date
+
 LocalDate today = LocalDate.now()
 today.getYear()
 LocalDate.of(특정 년,월,일)
@@ -145,6 +163,7 @@ today.withDayOfMonth(특정 일)
 today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 판별 가능
 
 ## Eclipse 팁
+
 이클립스에서 지원 메소드 확인 Ctrl(Command) + O
 빠른수정 Ctrl(Command) + 1
 생성자 Alt(Command) + Shift(Option) + S
@@ -152,6 +171,7 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 코드 추천 - Ctrl + Space
 
 ## Array
+
 Array - int[] makrs = {1,2,3}
 int[] marks = new int[5] // int[5] {0,0,0,0,0}
 toString - Arrays.toString(marks)
@@ -160,14 +180,17 @@ equals - Arrays.equals(array1, array2)
 sort - Arrays.sort(makrs)
 
 ## 소수점 연산
+
 new BigDecimal(sum).divide(new BigDecimal(number),표현할 자리(3), RoundingMode.반올림여부(UP, DOWN))
 계산필요 O - BigDecimal 계산필요 X - double
 
 ## 가변적 매개변수
+
 function (int... values)
 넣는 만큼 배열 변수로 사용 가능, 가변 인수는 선언시 제일 마지막에 배치
 
 ## ArrayList
+
 선언 - ArrayList arrayList = new ArrayList()
 타입선언 - ArrayList<String> items = new ArrayList<String>
 추가 - arrayList.add("추가요소")
@@ -177,27 +200,33 @@ function (int... values)
 최소값 - Collections.min(arrayList)
 
 ## 클래스 설계
+
 1. state - 클래스의 상태 맴버 변수
 2. constructors - 어떤 생성자가 구성될지
 3. behavior - 어떠한 행동을 할지 함수
 
 ## String.format
+
 String.format("1st - %s(string), 2st - %f(float), 3st - %b(boolean), 4st - %d(decimal)", 1stData, 2stData, 3stData, 4stData)
 
 ## 상속 (IS A)
+
 상속관계 클래스 선언 - public class Student extends Person { } => Student (IS A 관계) Person
 상속시 상위 클래스 먼저 실행됨
 클래스에 변수로 지정하여 필수값을 만들수 있고, 초기값 지정 가능
 
 ## class 관계 확인
+
 AClass instanceof BClass
 
 ## 추상 클래스
+
 abstract class class명 { }
 추상 메소드 - abstract public void 메소드명()\
 추상 메소드는 정의, 형태 없는 메소드 Only 정의
 
 ## 인터페이스
+
 public interface A{ }
 public class B implements A { }
 다형성(같은 코드가 다른 반응)을 지원 - A test = new B(); 지원하며 인터페이스를 기준으로 Class 전환가능
@@ -206,3 +235,5 @@ public class B implements A { }
 인터페이스 내 상수가능 변수는 불가.
 메소드 앞에 default 추가하여 컴파일 에러 방지가능
 추상클래스와의 차이점 - 1. 인터페이스는 폐쇄형 선언 , 변수 설정 불가. 2. 한 클래스는 여러 인터페이스 구현. 3. 한 클래스는 여러 추상적 클래스 연장 불가.
+
+## List
