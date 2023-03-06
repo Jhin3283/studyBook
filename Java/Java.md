@@ -237,3 +237,13 @@ public class B implements A { }
 추상클래스와의 차이점 - 1. 인터페이스는 폐쇄형 선언 , 변수 설정 불가. 2. 한 클래스는 여러 인터페이스 구현. 3. 한 클래스는 여러 추상적 클래스 연장 불가.
 
 ## List
+어느 위치에 어떤 객체가 있는지 신경씀
+List<String> words = List.of("Apple","Bat","Cat") // 불변성. 가변성을 원할경우 ArrayList,Vector,LinkedList로 해야함 // new ArrayList<String>(words)
+길이 = words.size()
+
+## ArrayList VS LinkedList
+LinkedList 밑에는 LinkedList 이며,
+ArrayList 삽입과 제거가 LinkedList에 비해 느림, LinkedList는 요소의 삽입과 제거가 배열보다 쉽지만 특정위치 요소 접근은 소모적
+
+## Vector VS ArrayList
+Vector는 모든 메소드에서 동기화 되어 스레드에서 안전함 안전성의 유무로 Vector, ArrayList 선택
