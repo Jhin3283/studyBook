@@ -275,3 +275,16 @@ Queue<String> queue = new PriorityQueue<>();
 요소 뺄때 - queue.poll()
 요소 추가 - queue.offer("apple")
 요소 여러개 추가 - queue.addAll(List.of("banana","cat")) // 자동으로 오름차순
+
+## map 인터페이스
+HashMap - 분류되지 않고 순서도 없음. 키와 null값 삽입가능
+HashTable - 해싱기법을 데이터 구조로 사용 Vector와 유사. 키와 null값 삽입불가
+LinkedHashMap - 삽입 순서 유지 정렬X
+TreeMap - 정렬O, NavigableMap
+
+## 제네릭
+public class className<T>{ } // 타입을 정하지 않고 입력할수 있고, 사용할때,
+className<Integer> test = new className<>(); // 이처럼 타입을 정하여 사용가능함
+오직 숫자만 사용 원할경우 <T extends Number>
+상한 경계 와일드카드 - static type List(List<? extends Number> numbers){ } // Number 클래스를 연장, 리스트들에 대해 공통된 논리구현
+하한 경계 와일드 카드 - static type List(List<? super Number> numbers){ } // 숫자의 하위 타입들의 여러 다른 값들을 많이 추가가능
