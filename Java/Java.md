@@ -269,3 +269,9 @@ Set 인터페이스는 위치X , 순서 중요X
 Hashset - 삽입 순서나 정렬 순서 상관 X
 LinkedHastSet - 삽입 순서 O 정렬순서 X
 TreeSet - 삽입 순서 X 정렬순서 O
+
+## queue 인터페이스
+Queue<String> queue = new PriorityQueue<>();
+요소 뺄때 - queue.poll()
+요소 추가 - queue.offer("apple")
+요소 여러개 추가 - queue.addAll(List.of("banana","cat")) // 자동으로 오름차순
