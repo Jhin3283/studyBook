@@ -193,11 +193,13 @@ function (int... values)
 
 선언 - ArrayList arrayList = new ArrayList()
 타입선언 - ArrayList<String> items = new ArrayList<String>
-추가 - arrayList.add("추가요소")
-삭제 - arrayList.remove("삭제요소")
+추가 - arrayList.add("인덱스", "추가요소")
+삭제 - arrayList.remove("삭제요소 Or 인덱스")
 크기 - arrayList.size()
 최대값 - Collections.max(arrayList)
 최소값 - Collections.min(arrayList)
+정렬 - Collections.sort(arrayList)
+대체 - arrayList.set("인덱스", "추가요소")
 
 ## 클래스 설계
 
@@ -247,3 +249,23 @@ ArrayList 삽입과 제거가 LinkedList에 비해 느림, LinkedList는 요소�
 
 ## Vector VS ArrayList
 Vector는 모든 메소드에서 동기화 되어 스레드에서 안전함 안전성의 유무로 Vector, ArrayList 선택
+
+## 원소 반복
+00for문도 가능하지만,
+Iterator words = words.iterator();
+while(words.hasNext()){ }
+위 문을 통하여 반복문 실행가능 // 반복문 도중 List의 요소를 삭제할때 적합
+
+## compare 인터페이스
+sort의 비교 연산 넣기위함
+public int compareTo(Class that){
+  return Integer.compare(this.id, that.id) // 내림차순 that.id, this.id
+}
+
+## set 인터페이스
+Set<String> set = Set.of("apple","banana","cat") // 불변
+Set<String> hashset = new HashSet<>(set) // 가변
+Set 인터페이스는 위치X , 순서 중요X
+Hashset - 삽입 순서나 정렬 순서 상관 X
+LinkedHastSet - 삽입 순서 O 정렬순서 X
+TreeSet - 삽입 순서 X 정렬순서 O
