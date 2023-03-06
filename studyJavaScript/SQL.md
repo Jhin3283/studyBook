@@ -225,3 +225,9 @@ select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <ta
 
 ### exclusive join
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> where (조건 = null)
+
+### between
+select * from <table명> where <colum명> between <시작값> and <종료값>;
+
+### 상위 몇개 구하기
+select top <n> * from <table명> order by <colum명> <ASC,DESC>
