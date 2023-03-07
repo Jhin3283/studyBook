@@ -16,4 +16,15 @@ JVM실행하고 Spring context 만들고 구성 클래스 빈 사용.
 getter, setter, 생성자 만드는게 자동으로 됨. 맴버 변수만 입력하면 됨.
 
 ## 스프링 컨테이너
-스프링 빈 및 그의 수명 주기를 관리하는 컨테이너
+스프링 빈 및 그의 수명 주기를 관리하는 컨테이너. 클래스를 입력받아 러닝 시스템을 만드는 것
+자바 클래스를 만들고 구성 만들면 IOC(제어의 역전)컨테이너(=스프링 컨테이너, 스프링컨텍스트)가 런타임 시스템을 만듬
+종류: Bean Factory(기본 스프링 컨테이너), Application Context(웹 어플리케이션 구축 중, 국제화 기능이 필요한 경우 사용, 스프링 AOP(관점 지향 프로그래밍)통합)
+
+## Java Bean Vs POJO VS Spring Bean
+POJO(Plain Old Java Object) - 오래된 방식의 간단한 자바 오브젝트 모든 자바 객체는 POJO
+Java Bean - EJB(Enterprise Java Bean) 제약사항 1. public no-arg constructor 2. getter, setter있어야함 3. 직렬화 가능 - implements Serializable
+Spring Bean - 스프링 내부에 빈을 말함.
+
+## Bean 자동 와이어링
+Primary - 여러개의 Bean에서 우선순위를 정할수 있음.
+Qualifier - 여러개의 Bean에서 사용 정할수 있음. (Alias와 유사)
