@@ -169,6 +169,7 @@ today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 �
 생성자 Alt(Command) + Shift(Option) + S
 찾아가기 (VSCode F12기능) - Ctrl + Alt + H
 코드 추천 - Ctrl + Space
+클래스 생성 - Ctrl + N
 
 ## Array
 
