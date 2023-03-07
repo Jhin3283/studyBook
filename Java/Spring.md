@@ -25,6 +25,9 @@ POJO(Plain Old Java Object) - 오래된 방식의 간단한 자바 오브젝트 
 Java Bean - EJB(Enterprise Java Bean) 제약사항 1. public no-arg constructor 2. getter, setter있어야함 3. 직렬화 가능 - implements Serializable
 Spring Bean - 스프링 내부에 빈을 말함.
 
-## Bean 자동 와이어링
+## Bean auto 와이어링
 Primary - 여러개의 Bean에서 우선순위를 정할수 있음.
 Qualifier - 여러개의 Bean에서 사용 정할수 있음. (Alias와 유사)
+
+## 원하는 객체 찾기
+@Component 어노테이션과 @ComponentScan 어노테이션을 통해 인터페이스를 만들어 자동으로 추가 가능.
