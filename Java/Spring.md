@@ -58,3 +58,13 @@ class AnotherComplexAlgorithm
 필드,세터,생성자로 Autowiring || 특정 메소드 호출하여 Autowiring
 스프링 프레임워크가 Bean생성 || 프로그래머가 직접 코드 작성하여 Bean생성
 일반적으로는 @Component 사용. Bean생성 전 작업 많거나 스프링 시큐리티같은 서드파티 라이브러리를 위한 Bean 생성시 @Bean 사용.
+
+## @Lazy
+스프링 Bean의 기본 초기화는 Eager(이른 초기화)인데, @Lazy 어노테이션을 사용하면 사용하기 전 초기화가 가능.
+@Configuration, @Component에 사용가능.
+Bean이 app에서 매우 적게 사용될때 사용.
+
+## @Scope
+싱글톤 - 스프링 IOC 컨테이너마다 1개의 객체 인스턴스
+프로토타입 - 많은 객체 인스턴스가 스프링 IOC 컨테이너마다 생성 가능
+리퀘스트 -
