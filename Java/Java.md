@@ -162,15 +162,6 @@ today.withYear(특정 년)
 today.withDayOfMonth(특정 일)
 today.isBefore(특정 날짜) Or today.isAfter(특정 날짜) 를통해 시간 판별 가능
 
-## Eclipse 팁
-
-이클립스에서 지원 메소드 확인 Ctrl(Command) + O
-빠른수정 Ctrl(Command) + 1
-생성자 Alt(Command) + Shift(Option) + S
-찾아가기 (VSCode F12기능) - Ctrl + Alt + H
-코드 추천 - Ctrl + Space
-클래스 생성 - Ctrl + N
-
 ## Array
 
 Array - int[] makrs = {1,2,3}
