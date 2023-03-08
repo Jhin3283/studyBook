@@ -80,3 +80,17 @@ Bean이 app에서 매우 적게 사용될때 사용.
 어노테이션 집합을 정의하는 사양. 의존성 주입에도 사용.
 @Autowired => @Inject
 @Component => @Named
+
+## Annotations VS XML Configuration
+Easy to Use || Hard
+short || No
+No Clean POJO || Clean POJO
+유지관리 편함 || 유지관리 불편
+많이 사용 || 거의 사용 X
+두가지를 혼용하여 사용하지 말것
+
+## 스테레오 타입 Annotation
+@Component 대신 사용 Annotation들
+1. @Service: 어노테이션된 클래스가 비즈니스 로직을 가지고 있다는 의미
+2. @Controller: 웹 어플리케이션과 REST API에서 컨트롤러 정의
+3. @Repository: Bean이 데이터베이스에서 데이터 CRUD 요청하는 경우사용
