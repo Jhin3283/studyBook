@@ -67,4 +67,16 @@ Bean이 app에서 매우 적게 사용될때 사용.
 ## @Scope
 싱글톤 - 스프링 IOC 컨테이너마다 1개의 객체 인스턴스
 프로토타입 - 많은 객체 인스턴스가 스프링 IOC 컨테이너마다 생성 가능
-리퀘스트 -
+
+## Java Singleton(GOF) VS Spring Singleton
+스프링 싱글톤 - 스프링 IOC 컨테이너당 1개의 객체 인스턴스
+자바 싱글톤 - JVM당 1개의 객체 인스턴스
+
+## @PostConstruct
+의존성이 와이어링 되자마자 작업 하려면 @PostConstruct 어노테이션 사용
+빈이 컨테이너에서 제거되기 전 작업은 @PreDestroy 어노테이션 사용
+
+## Jakarta CDI
+어노테이션 집합을 정의하는 사양. 의존성 주입에도 사용.
+@Autowired => @Inject
+@Component => @Named
