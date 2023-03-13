@@ -231,30 +231,36 @@ public class B implements A { }
 추상클래스와의 차이점 - 1. 인터페이스는 폐쇄형 선언 , 변수 설정 불가. 2. 한 클래스는 여러 인터페이스 구현. 3. 한 클래스는 여러 추상적 클래스 연장 불가.
 
 ## List
+
 어느 위치에 어떤 객체가 있는지 신경씀
 List<String> words = List.of("Apple","Bat","Cat") // 불변성. 가변성을 원할경우 ArrayList,Vector,LinkedList로 해야함 // new ArrayList<String>(words)
 길이 = words.size()
 
 ## ArrayList VS LinkedList
+
 LinkedList 밑에는 LinkedList 이며,
 ArrayList 삽입과 제거가 LinkedList에 비해 느림, LinkedList는 요소의 삽입과 제거가 배열보다 쉽지만 특정위치 요소 접근은 소모적
 
 ## Vector VS ArrayList
+
 Vector는 모든 메소드에서 동기화 되어 스레드에서 안전함 안전성의 유무로 Vector, ArrayList 선택
 
 ## 원소 반복
+
 00for문도 가능하지만,
 Iterator words = words.iterator();
 while(words.hasNext()){ }
 위 문을 통하여 반복문 실행가능 // 반복문 도중 List의 요소를 삭제할때 적합
 
 ## compare 인터페이스
+
 sort의 비교 연산 넣기위함
 public int compareTo(Class that){
-  return Integer.compare(this.id, that.id) // 내림차순 that.id, this.id
+return Integer.compare(this.id, that.id) // 내림차순 that.id, this.id
 }
 
 ## set 인터페이스
+
 Set<String> set = Set.of("apple","banana","cat") // 불변
 Set<String> hashset = new HashSet<>(set) // 가변
 Set 인터페이스는 위치X , 순서 중요X
@@ -263,18 +269,21 @@ LinkedHastSet - 삽입 순서 O 정렬순서 X
 TreeSet - 삽입 순서 X 정렬순서 O
 
 ## queue 인터페이스
+
 Queue<String> queue = new PriorityQueue<>();
 요소 뺄때 - queue.poll()
 요소 추가 - queue.offer("apple")
 요소 여러개 추가 - queue.addAll(List.of("banana","cat")) // 자동으로 오름차순
 
 ## map 인터페이스
+
 HashMap - 분류되지 않고 순서도 없음. 키와 null값 삽입가능
 HashTable - 해싱기법을 데이터 구조로 사용 Vector와 유사. 키와 null값 삽입불가
 LinkedHashMap - 삽입 순서 유지 정렬X
 TreeMap - 정렬O, NavigableMap
 
 ## 제네릭
+
 public class className<T>{ } // 타입을 정하지 않고 입력할수 있고, 사용할때,
 className<Integer> test = new className<>(); // 이처럼 타입을 정하여 사용가능함
 오직 숫자만 사용 원할경우 <T extends Number>
