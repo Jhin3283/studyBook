@@ -1,3 +1,3 @@
 # studyBook
 
-now studing... Java Spring Boot
+Now studying... Java Spring Boot
