@@ -244,3 +244,6 @@ SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열
 3. 특정 문자를 포함하는  데이터  검색
 
 SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열%';
+
+### 데이터 삭제(auto-increment 초기화)
+TRUNCATE TABLE table_name;
