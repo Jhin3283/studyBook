@@ -73,3 +73,7 @@ order: [[models.sub_code,"level","ASC"]]
 Count - [Sequelize.fn("COUNT", "fromAP_id"), "count"],
 
 Sum - [Sequelize.fn('SUM', Sequelize.col('histories.amount')), 'total']
+
+# Sequelize literal
+
+중복제거 - DISTINCT => [Sequelize.literal("COUNT(DISTINCT(stamac))", "apmac_id"), "count"]
