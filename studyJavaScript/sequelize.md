@@ -78,3 +78,6 @@ Sum - [Sequelize.fn('SUM', Sequelize.col('histories.amount')), 'total']
 중복제거 - DISTINCT => [Sequelize.literal("COUNT(DISTINCT(stamac))", "apmac_id"), "count"]
 
 업데이트 Increment => {count: Sequelize.literal(`count + ${data.count}`)}
+
+# Sequelize config
+한국시간 설정 - "timezone": "+09:00" 항목 추가
