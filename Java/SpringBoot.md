@@ -11,6 +11,9 @@ Dispatcher Servlet 자동구성
 ## Spring Boot Dev Tools
 저장할때 자동 재시작 nodemon 같은 역활
 
+## Spring Boot Actuator
+dev Ops를 원활이 하기 위해 EndPoint로 정보를 주는 역활
+
 ## Spring VS Spring MVC VS Spring Boot
 
 Spring Framework 핵심 - 의존성 주입, 다양한 모듈 지원
