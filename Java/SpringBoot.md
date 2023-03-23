@@ -27,3 +27,16 @@ Spring Boot의 속성을 넣을수 있음 (.env와 유사)
 ex) server.port=8085,
 coach.name=Mickey Mouse
 값 주입 ex) @Value("${coach.name}")
+
+### resources/static
+고정 리소스 사용(public과 유사)
+ex) Html, Css, JavaScript, images
+
+### 주의 사항
+프로그램이 JAR로 만들어질 경우 src/main/webapp 같은 디렉토리 사용금지
+
+### resources/template
+아래의 템플릿을 넣어 auto-configuration가능
+- FreeMarker
+- Thymeleaf
+- Mustache
