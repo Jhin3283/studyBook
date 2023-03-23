@@ -21,3 +21,9 @@ Spring JDBC - 쿼리를 적고 자바코드로 실행하는것은 동일하지�
 ## JPA Vs Spring Data JPA
 JPA(Hibernate) - 쿼리를 수동으로 적을 필요 없고, Entities와 Tables 매핑
 Spring Data JPA - GPA(Java Persistence API)를 더 쉽게 만듬
+
+### application.properties
+Spring Boot의 속성을 넣을수 있음 (.env와 유사)
+ex) server.port=8085,
+coach.name=Mickey Mouse
+값 주입 ex) @Value("${coach.name}")
