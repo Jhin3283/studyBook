@@ -8,6 +8,9 @@ Dispatcher Servlet 자동구성
 내장된 Servlet 컨테이너도 자동으로 구성 기본값 Tomcat
 자동 구성 에러 페이지도 존재
 
+## Spring Boot Dev Tools
+저장할때 자동 재시작 nodemon 같은 역활
+
 ## Spring VS Spring MVC VS Spring Boot
 
 Spring Framework 핵심 - 의존성 주입, 다양한 모듈 지원
