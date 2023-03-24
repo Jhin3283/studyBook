@@ -112,3 +112,6 @@ No Clean POJO || Clean POJO
 1. @Service: 어노테이션된 클래스가 비즈니스 로직을 가지고 있다는 의미
 2. @Controller: 웹 어플리케이션과 REST API에서 컨트롤러 정의
 3. @Repository: Bean이 데이터베이스에서 데이터 CRUD 요청하는 경우사용
+
+## 제어의 역전(IOC)
+objects의 생성과 관리에 있어 접근성이 외부소스에 있는 것으로 Spring Container에서 제어의 역전이 일어나고, 의존성 주입을 하게됨.
