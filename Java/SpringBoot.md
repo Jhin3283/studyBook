@@ -49,3 +49,6 @@ ex) Html, Css, JavaScript, images
 - FreeMarker
 - Thymeleaf
 - Mustache
+
+## Hibernate
+자바 객체를 데이터베이스에 저장하는 프레임 워크 low-level SQL 사용 및 ORM
