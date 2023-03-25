@@ -1,3 +1,3 @@
 # studyBook
 
-Now studying... Java Spring Boot
+Now studying... Java Spring Boot, Nest JS
