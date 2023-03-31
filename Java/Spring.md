@@ -115,3 +115,7 @@ No Clean POJO || Clean POJO
 
 ## 제어의 역전(IOC)
 objects의 생성과 관리에 있어 접근성이 외부소스에 있는 것으로 Spring Container에서 제어의 역전이 일어나고, 의존성 주입을 하게됨.
+
+## 기타 설정
+스프링 배너 삭제 = spring.main.banner-mode=off
+로그등급별 보기 = logging.level.root=warn
