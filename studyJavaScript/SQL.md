@@ -247,3 +247,6 @@ SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열
 
 ### 데이터 삭제(auto-increment 초기화)
 TRUNCATE TABLE table_name;
+
+### AUTO_INCREMENT 시작 숫자 정하기
+ALTER TABLE <table명> AUTO_INCREMENT=<시작 숫자>
