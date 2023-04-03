@@ -250,3 +250,16 @@ TRUNCATE TABLE table_name;
 
 ### AUTO_INCREMENT 시작 숫자 정하기
 ALTER TABLE <table명> AUTO_INCREMENT=<시작 숫자>
+
+### SubQuery
+단일행 서브쿼리
+SELECT <colum명> FROM <table명> WHERE <colum명> = (SELECT SELECT <colum명> FROM <table명> WHERE <조건>)
+
+다중행 서브쿼리
+SELECT <colum명> FROM <table명> WHERE <colum명> IN (SELECT <colum명> FROM <table명> WHERE <조건>)
+
+다중칼럼
+SELECT <colum명> FROM <table명> WHERE (<colum명>,<colum명>) IN (SELECT <colum명>,<colum명> FROM <table명> WHERE <조건>)
+
+인라인 뷰
+SELECT <colum명> FROM <table명> INNER JOIN (SELECT <colum명> FROM <table명> WHERE <조건>) <table명> ON (<Join 조건>)
