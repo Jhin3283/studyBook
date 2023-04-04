@@ -17,6 +17,10 @@ dev Ops를 원활이 하기 위해 EndPoint로 정보를 주는 역활
 ## Spring Security
 엔드포인트를 권한에 맞게 관리가 가능
 
+## spring-boot-starter-data-rest
+entity, JpaRepository를 스캔하여 REST endpoints 얻을수 있는 툴, HATEOAS를 응답으로 사용
+HATEOAS - Hypermedia as the Engine of Application State
+
 ## Spring VS Spring MVC VS Spring Boot
 
 Spring Framework 핵심 - 의존성 주입, 다양한 모듈 지원
