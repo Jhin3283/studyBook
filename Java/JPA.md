@@ -33,3 +33,8 @@ strategy 기타 설명
 ### DAO
 Data Access Object의 약자로 App과 DB사이에 도우미 클래스로 JPA Entity 매니저가 필요
 DAO <-> Entity Manager <-> Data Source <-> DB
+
+### DAO 없이 JpaRepository interface 이용
+public interface EmployeeRepository extends JpaRepository<Entity type, primary key>
+@Transactional 어노테이션도 Jpa에서 자동으로 해줌
+
