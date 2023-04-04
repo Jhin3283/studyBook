@@ -5,6 +5,7 @@
 
 ### number
 TS에서는 integer, float, double 없이 모두 number
+앞에 +를 붙이면 Number(string)와 같은 효과
 
 ### string
 '', "", `` 등의 모든 텍스트
@@ -30,3 +31,9 @@ any[] - 이렇게 하여 여러개의 타입 넣기 가능
 ### any
 특정한 타입이 정해지지 않은 타입, 바닐라JS와 크게 차이가 없기 때문에 TS compiler가 작동하지 않음.
 런타임 도중 특정 값에 수행하고자 하는 작업의 범위를 좁히기 위해서만 any사용 권장
+
+### union type
+input1: number | string | boolean - 이처럼 선언하여 다양한 타입을 받을수 있지만 예외처리를 해줘야함
+
+### literal type
+스트링이나 숫자 등과 같은 핵심 타입을 기반으로 특정목적으로 사용 가능
