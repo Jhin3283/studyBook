@@ -40,3 +40,6 @@ input1: number | string | boolean - 이처럼 선언하여 다양한 타입을 �
 
 ### alias
 type 이름 = number | string으로 union 타입대신 참조해서 사용가능
+
+### Function type
+Function 함수를 이용하여 타입 선언은 가능하지만 아무 함수나 적용가능,    let combineValues: (a:number, b:number)=> number; 이처럼 변수와 리턴에 대한 타입을 지정하여 에러 방지
