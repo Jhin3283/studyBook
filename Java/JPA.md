@@ -38,3 +38,6 @@ DAO <-> Entity Manager <-> Data Source <-> DB
 public interface EmployeeRepository extends JpaRepository<Entity type, primary key>
 @Transactional 어노테이션도 Jpa에서 자동으로 해줌
 
+### Spring Security Model
+보안을 위한 프레임워크 Servlet filter를 이용해 구현됨.
+Servlet Filters - HTTP Request의 pre-process과 post-process에 사용됨
