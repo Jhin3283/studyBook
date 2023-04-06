@@ -49,3 +49,8 @@ any 타입과 다르게 문자열을 원하는 변수에 할당할수 없는데 
 
 ### never type
 void 타입과 다르게 never 이라는 타입을 반환 잘 사용하지는 않음.
+
+## TS Compiler
+tsc --init 명령어로 tsconfig.json 생성 후 tsc -w 를 이용해 와치모드로 변화 감지시 모든 ts파일 컴파일 가능
+include, exclude 사용 가능 단 사용시 기본으로 되는 부분들이 빠지기 때문에 잘 확인해야함
+compiler Options - noImplicitAny(Any타입 추론 관련),
