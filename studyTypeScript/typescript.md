@@ -43,3 +43,9 @@ type 이름 = number | string으로 union 타입대신 참조해서 사용가능
 
 ### Function type
 Function 함수를 이용하여 타입 선언은 가능하지만 아무 함수나 적용가능,    let combineValues: (a:number, b:number)=> number; 이처럼 변수와 리턴에 대한 타입을 지정하여 에러 방지
+
+### unknown type
+any 타입과 다르게 문자열을 원하는 변수에 할당할수 없는데 any 타입은 가능
+
+### never type
+void 타입과 다르게 never 이라는 타입을 반환 잘 사용하지는 않음.
