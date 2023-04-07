@@ -61,3 +61,13 @@ VS Code TS 디버깅: https://code.visualstudio.com/docs/typescript/typescript-d
 ### Public vs Private
 public은 외부에서 접근이 가능하여 사이드이펙트 발생가능
 private는 class내부에서만 접근이 가능
+확장된 클래스에서 사용을 원할때는 protected를 이용
+constructor 앞에 private를 붙여 new를 사용하여 생성하는것을 방지 가능
+
+## abstract class
+상위 클래스이 메소드를 다양하게 이용하고 싶을때, 추상 클래스로 만들어 활용성을 높일수 있음.
+
+## interface
+class들의 타입과 메소드를 미리 만들어서 여러 class에 적용가능.
+type 과는 다르게 객체의 구조를 설명하기 위해서만 사용됨
+상속과는 달리 여러개의 interface를 확장가능
