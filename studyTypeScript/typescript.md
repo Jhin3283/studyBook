@@ -54,3 +54,10 @@ void 타입과 다르게 never 이라는 타입을 반환 잘 사용하지는 �
 tsc --init 명령어로 tsconfig.json 생성 후 tsc -w 를 이용해 와치모드로 변화 감지시 모든 ts파일 컴파일 가능
 include, exclude 사용 가능 단 사용시 기본으로 되는 부분들이 빠지기 때문에 잘 확인해야함
 compiler Options - noImplicitAny(Any타입 추론 관련),
+tsconfig 문서: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+컴파일러 구성 문서: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+VS Code TS 디버깅: https://code.visualstudio.com/docs/typescript/typescript-debugging
+
+### Public vs Private
+public은 외부에서 접근이 가능하여 사이드이펙트 발생가능
+private는 class내부에서만 접근이 가능
