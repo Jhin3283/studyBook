@@ -90,3 +90,6 @@ constructor 앞에 private를 붙여 new를 사용하여 생성하는것을 방�
 class들의 타입과 메소드를 미리 만들어서 여러 class에 적용가능.
 type 과는 다르게 객체의 구조를 설명하기 위해서만 사용됨
 상속과는 달리 여러개의 interface를 확장가능
+class가 특정 기능이나 객체를 가지게 하고 특정구조를 가지게 해준다
+변수뒤에 ?를 붙여 선택적 매개변수로 만들기 가능
+TS 인터페이스 관련 추가 정보: https://www.typescriptlang.org/docs/handbook/2/objects.html
