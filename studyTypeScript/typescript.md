@@ -94,6 +94,15 @@ class가 특정 기능이나 객체를 가지게 하고 특정구조를 가지�
 변수뒤에 ?를 붙여 선택적 매개변수로 만들기 가능
 TS 인터페이스 관련 추가 정보: https://www.typescriptlang.org/docs/handbook/2/objects.html
 
+## 타입가드
+타입 가드를 사용하면 값으로 작업을 수행하기 전에 타입을 검사하여 런타임 오류를 방지
+
 ## typecasting
 타입을 정하고 싶은 것 앞에 <타입> 지정 ex) const userInputElement = <HTMLInputElement>document.getElementById("user-input")
 뒤에 타입을 as 로 하여 지정 ex) const userInputElement = document.getElementById("user-input")! as HTMLInputElement
+
+## optional chaining
+존재하는지 여부가 불확실한 변수 뒤에 ?를 붙여서 ts컴파일 에러 없이 실행가능
+
+## null 병합 연산자
+null, undefined 처리 할때 || 대신 ?? 를 이용하여 빈스트링이나 0을 빼고 처리 가능
