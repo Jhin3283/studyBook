@@ -106,3 +106,9 @@ TS 인터페이스 관련 추가 정보: https://www.typescriptlang.org/docs/han
 
 ## null 병합 연산자
 null, undefined 처리 할때 || 대신 ?? 를 이용하여 빈스트링이나 0을 빼고 처리 가능
+
+고급 타입 관련 추가 정보: https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
+
+## Generics
+Array<number> 이런식으로 어떤 값들이 들어가야 하는지 정하는 것.
+프로미스도 Generics 타입으로 지정 가능
