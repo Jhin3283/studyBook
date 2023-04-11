@@ -112,3 +112,9 @@ null, undefined 처리 할때 || 대신 ?? 를 이용하여 빈스트링이나 0
 ## Generics
 Array<number> 이런식으로 어떤 값들이 들어가야 하는지 정하는 것.
 프로미스도 Generics 타입으로 지정 가능
+
+## Partial
+Partial<T> Partial과 제네릭 타입을 이용하여 모든 속성을 선택적으로 바꿔줌
+
+## Readonly
+선언이후 변경이 되지 않아야 할 경우 Readonly<string[]> 이처럼 지정하여 변경 방지가능
