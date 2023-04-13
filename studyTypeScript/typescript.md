@@ -122,3 +122,4 @@ Partial<T> Partial과 제네릭 타입을 이용하여 모든 속성을 선택�
 
 ## Decorator
 메타프로그래밍 가능 어노테이션과 유사, 실행순서는 bottom-top 방식
+데코레이터 관련 추가 정보: https://www.typescriptlang.org/docs/handbook/decorators.html
