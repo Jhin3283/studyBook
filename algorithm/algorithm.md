@@ -38,3 +38,47 @@
 
 # BIG O
 알고리즘이 실행되는 데 걸리는 시간을 말하는 언어
+O(n) => input 값에 의해 변함 for문에서 적용
+O(1) => 지속적인 시간 Array의 index 하나에 접근, 선언, 할당 등에 적용
+O(n^2) => Quadratic Time  이중 반복문에 적용됨
+
+## Big O Rule
+1. Worst case => 최악의 상황을 가정하여 표기 ex) For문 진행중 맨 마지막에 있을수도 있는걸 가정하여 O(n) 이됨
+2. Remove Constants => 상수 제거 실제로는 O(n/2 +1) 이런식이어도 상수제거 하여 O(n)으로 표기
+3. Different terms for inputs => 2개의 다른 변수가 인풋되면 O(a + b) or O(a*b)가 된다
+4. Drop Non Dominatnts => 우세한 용어만 사용 ex) O(n + n^2) 일경우 O(n^2)로 표기
+
+# Big O Cheat Sheet:
+-Big Os-
+O(1) Constant- no loops
+O(log N) Logarithmic- usually searching algorithms have log n if they are sorted (Binary Search)
+O(n) Linear- for loops, while loops through n items
+O(n log(n)) Log Liniear- usually sorting operations
+O(n^2) Quadratic- every element in a collection needs to be compared to ever other element. Two
+nested loops
+O(2^n) Exponential- recursive algorithms that solves a problem of size N
+O(n!) Factorial- you are adding a loop for every element
+
+** Iterating through half a collection is still O(n)
+** Two separate collections: O(a * b)
+
+-What can cause time in a function?-
+Operations (+, -, *, /)
+Comparisons (<, >, ==)
+Looping (for, while)
+Outside Function call (function())
+
+-Rule Book-
+Rule 1: Always worst Case
+Rule 2: Remove Constants
+Rule 3: Different inputs should have different variables. O(a+b). A and B arrays nested would be
+O(a*b)
++ for steps in order
+* for nested steps
+Rule 4: Drop Non-dominant terms
+
+-What causes Space complexity?-
+Variables
+Data Structures
+Function Call
+Allocations
