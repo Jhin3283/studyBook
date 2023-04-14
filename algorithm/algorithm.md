@@ -41,6 +41,10 @@
 O(n) => input 값에 의해 변함 for문에서 적용
 O(1) => 지속적인 시간 Array의 index 하나에 접근, 선언, 할당 등에 적용
 O(n^2) => Quadratic Time  이중 반복문에 적용됨
+O(n!) => 모든 요소의 루프를 추가하는 경우. 잘사용하지 않음.
+
+## 좋은 코드 요소
+1. Readable 2. Memory 3. Speed
 
 ## Big O Rule
 1. Worst case => 최악의 상황을 가정하여 표기 ex) For문 진행중 맨 마지막에 있을수도 있는걸 가정하여 O(n) 이됨
