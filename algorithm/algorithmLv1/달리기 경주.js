@@ -8,7 +8,7 @@ function solution(players, callings) {
     return players;
 }
 
-// 배열을 이용해서 인덱스 값을 이용해서 작업할 경우 O(n) 만큼 추가됨. 객체 형태로 바꿔야 함
+// 배열을 이용해서 인덱스 값을 이용해서 작업할 경우 O(n^2)로 됨. 객체 형태로 바꿔야 함
 
 function solution(players, callings){
     let obj ={};
