@@ -7,18 +7,21 @@ function solution(players, callings) {
     }
     return players;
 }
+
 // 배열을 이용해서 인덱스 값을 이용해서 작업할 경우 O(n) 만큼 추가됨. 객체 형태로 바꿔야 함
 
-function solution(players, callings) {
-    let obj = {};
-    players.forEach((v, idx) => obj[v] = idx);
-    for(let i = 0; i < callings.length; i++){
-        let idx = obj[callings[i]];
-        let player = players[idx-1];
-        players[idx-1] = callings[i];
-        players[idx] = player;
-        obj[callings[i]]--;
+function solution(players, callings){
+    let obj ={};
+    players.forEach((e,idx)=> {
+        obj[e] = idx
+    })
+    for(let i =0; i<callings.length; i++){
+        let idx = obj[callings[i]]
+        let player = players[idx - 1]
+        players[idx - 1] = callings[i]
+        players[idx] = player
+        obj[callings[i]] --
         obj[player]++;
     }
-    return Object.entries(players).map((v)=> v[1])
+    return players
 }
