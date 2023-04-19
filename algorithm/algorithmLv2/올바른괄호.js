@@ -13,3 +13,5 @@ function solution(s){
     return false;
     }
 }
+
+// 문자열을 순서대로 queue하여 배열의 반복문 보다 효율성 높일수 있음.
