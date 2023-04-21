@@ -18,3 +18,8 @@ function solution(s) {
     return answer;
 }
 // toString(2)로 이진법 변환이 핵심
+
+const binaryString = '1010';
+const decimalNumber = parseInt(binaryString, 2);
+
+// Binary to Numberic Conversion
