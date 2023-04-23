@@ -1,3 +1,3 @@
 # studyBook
 
-Now studying... Nest JS, JPA, Algorithm
+Now studying... Nest JS, Algorithm
