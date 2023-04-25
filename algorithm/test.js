@@ -1,20 +1,48 @@
-function solution(today, terms, privacies) {
+function solution(wallpaper) {
     var answer = [];
-    const dateString = today;
-    const [year, month, day] = dateString.split(".");
-    const termObj ={}
-    terms.forEach((el) => {
-        let dum = el.split(" ")
-        termObj[dum[0]] = new Date(year, month - dum[1]-1, day)
-        })
-    for(let i =0; i<privacies.length; i++){
-        let spl = privacies[i].split(" ")
-        if(new Date(spl[0]) <= termObj[spl[1]]){
-            answer.push(i+1)
+    let grape = [];
+    let start = [];
+    let end = [];
+    for(raw of wallpaper){
+        grape.push([])
+    }
+    for(let i=0; i<wallpaper.length; i++){
+        for(let j=0; j<wallpaper[i].length; j++){
+            if(wallpaper[i][j] === "#"){
+                grape[i][j] = 1;
+            } else{
+                grape[i][j] = 0;
+            }
         }
     }
+    console.log(grape)
+    for(let i=0; i<grape[0].length; i++){
+        let loop = false
+        for(let j=0; j<grape.length; j++){
+            if(grape[j][i] === 1){
+                answer.push(j,i)
+                console.log(j,i)
+                loop = true
+                break;
+            }
+        }
+        if(loop) break;
+    }
+    for(let i=grape[0].length-1; i>=0; i--){
+        let loop = false
+        console.log("Here I am")
+        for(let j=grape.length-1; j>=0; j--){
+            if(grape[j][i] === 1){
+                answer.push(j+1,i+1)
+                // console.log(j+1,i+1)
+                loop = true
+                break;
+            }
+        }
+        if(loop) break;
+    }
+    console.log("Answer", answer)
     return answer;
 }
-console.log(solution("2022.05.19", ["A 6", "B 12", "C 3"], ["2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"]))
 
-// 날짜 String 형태로 비교시 비교가 잘안됨 new Date로 Date format으로 변환하여 작업
+solution([".##...##.", "#..#.#..#", "#...#...#", ".#.....#.", "..#...#..", "...#.#...", "....#...."])
