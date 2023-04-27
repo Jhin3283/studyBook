@@ -10,4 +10,4 @@ function solution(numbers) {
     return answer;
 }
 
-// 이중 for문 사용시 효율성 문제로 작동 안됨
+// 이중 for문 사용시 효율성 문제로 작동 안됨 stack을 이용하여 while문 이용
