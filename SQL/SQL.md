@@ -31,23 +31,23 @@ email varchar(255)
 
 # SQL 명령어
 
-SELECT 특성*1 - 데이터셋에 포함될 특성을 특정(SELECT) \* 는 와일드카드 (wildcard) 로 전부 선택할 때에 사용
+SELECT 특성\*1 - 데이터셋에 포함될 특성을 특정(SELECT) \* 는 와일드카드 (wildcard) 로 전부 선택할 때에 사용
 
-SELECT 특성\_1 FROM 테이블*이름 - FROM 뒤에는 결과를 도출해낼 데이터베이스 테이블을 명시. 테이블과 관련한 작업에는 반드시 입력하여야 함.
+SELECT 특성\_1 FROM 테이블\*이름 - FROM 뒤에는 결과를 도출해낼 데이터베이스 테이블을 명시. 테이블과 관련한 작업에는 반드시 입력하여야 함.
 
-SELECT 특성*1, 특성\_2 FROM 테이블*이름 WHERE 특성*1 = "특정 값" - WHERE은 필터 역할을 하는 쿼리문으로 선택적으로 사용가능
+SELECT 특성*1, 특성\_2 FROM 테이블*이름 WHERE 특성\*1 = "특정 값" - WHERE은 필터 역할을 하는 쿼리문으로 선택적으로 사용가능
 
 특정 값과 비교하여 필터를 할때 '<','>','<=','>='를 사용함. 문자열에서 특정 값과 비슷한 값들을 필터할 때 'LIKE'와 '\%' 혹은 '\*' 를 사용. 리스트의 값들과 일치하는 데이터를 필터할 때에는 'IN' 을 사용. 값이 없는 경우 'NULL' 을 찾을 때에는 'IS' 와 같이 사용. 값이 없는 경우를 제외할 때에는 'NOT' 을 추가해 이용
 
 SELECT \* FROM 테이블*이름 ORDER BY 특성*1 - ORDER BY는 돌려받는 데이터 결과를 어떤기준으로 정렬하여 출력할지 결정함. 선택적으로 사용가능. DESC를 뒤에 붙여서 내림차순정렬 기본: 오름차순
 
-SELECT \* FROM 테이블*이름 LIMIT 200 - LIMIT는 결과로 출력할 데이터의 개수를 정할수 있음. 선택적으로 사용가능. 쿼리문에서 사용할때, 가장 마지막에 추가
+SELECT \* FROM 테이블\*이름 LIMIT 200 - LIMIT는 결과로 출력할 데이터의 개수를 정할수 있음. 선택적으로 사용가능. 쿼리문에서 사용할때, 가장 마지막에 추가
 
 SELECT DISTINCT 특성*1 FROM 테이블*이름 - DISTINCT는 유니크한 값을 받고싶을때 사용
 
-SELECT _ FROM 테이블\_1 JOIN 테이블\_2 ON 테이블\_1.특성\_A = 테이블\_2.특성\_B - INNER JOIN 이나 JOIN으로 두 개 이상의 테이블을 서로 묶어서 하나의 결과 집합
+SELECT \_ FROM 테이블\_1 JOIN 테이블\_2 ON 테이블\_1.특성\_A = 테이블\_2.특성\_B - INNER JOIN 이나 JOIN으로 두 개 이상의 테이블을 서로 묶어서 하나의 결과 집합
 
-SELECT _ FROM 테이블\_1 LEFT OUTER JOIN 테이블\_2 ON 테이블\_1.특성\_A = 테이블\_2.특성\_B - OUTER JOIN은 조건에 부합하지 않는 행까지도 포함시켜 결합
+SELECT \_ FROM 테이블\_1 LEFT OUTER JOIN 테이블\_2 ON 테이블\_1.특성\_A = 테이블\_2.특성\_B - OUTER JOIN은 조건에 부합하지 않는 행까지도 포함시켜 결합
 
 LEFT JOIN은 왼쪽 테이블의 것은 조건에 부합하지 않더라도 모두 결합 RIGHT JOIN은 오른쪽 테이블의 것은 조건에 부합하지 않더라도 모두 결합
 
@@ -147,6 +147,7 @@ SELECT 실행 순서 FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
 # MySQL
 
 ## Service Mysql
+
 시작 – service mysql start
 재시작 – service mysql restart
 정지 – service mysql stop
@@ -155,33 +156,42 @@ SELECT 실행 순서 FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
 ## 유저 관리
 
 ### 접속
+
 mysql -u root -p
 
 ### 인증모드 확인
+
 SELECT user,plugin,host FROM mysql.user;
 
 ### 비밀번호 변경
+
 update user set password=PASSWORD('변경할 비밀번호') where user='root';
 
 ### 삭제
+
 delete from user where user='root';
 flush privileges;
 
 ### 생성
+
 create user 'root'@'localhost' identified by 'password';
 
 ### DB의 권한 부여
-grant all privileges on DB명.* to 'root'@'localhost';
+
+grant all privileges on DB명.\* to 'root'@'localhost';
 
 ### 계정권한 확인
+
 show grants for 'root'@'localhost';
 
 ## sql_mode
 
 ### 조회
+
 select @@sql_mode;
 
 ### 수정
+
 set @@session.sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 set @@sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -191,48 +201,62 @@ set @@global.sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FO
 ## database
 
 ### table명 변경
+
 rename table <table명> to <바꿀table명>
 
 ## CRUD
 
 ### Create
+
 insert into <table명> (colum1, colum2, colum3) values("value1","value2","value3");
 
 ### Read
+
 select <검색하고 싶은거 colum> from <table명> where (조건) order by (기준) limit (숫자);
 
 ### update
+
 update <table명> set (colum = value) where (조건);
 
 ### delete
+
 delete from <table명> where (조건);
 
 ### left outer join
+
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> where (조건)
 
 ### left outer join 여러개
+
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> left join <table명> on <합성 조건> where (조건)
 
 ### left right 차이
+
 기준이 왼쪽 table인지 오른쪽 기준인지 차이
 
 ### inner join
+
 왼쪽 오른쪽 모두 존재하는 데이터만 출력
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left inner join <table명> on <합성 조건> where (조건)
 
 ### full outer join
+
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> union [disctinct] right join <table명> on <합성 조건> where (조건)
 
 ### exclusive join
+
 select <검색하고 싶은거 colum> {as (지정하고 싶은 이름)} from <table명> left join <table명> on <합성 조건> where (조건 = null)
 
 ### between
-select * from <table명> where <colum명> between <시작값> and <종료값>;
+
+select \* from <table명> where <colum명> between <시작값> and <종료값>;
 
 ### 상위 몇개 구하기
-select top <n> * from <table명> order by <colum명> <ASC,DESC>
+
+select top <n> \* from <table명> order by <colum명> <ASC,DESC>
 
 ### MySql like
+
 1. 특정 문자로 시작하는 데이터 검색
 
 SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '특정 문자열%';
@@ -241,17 +265,20 @@ SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '특정 문자열%
 
 SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열';
 
-3. 특정 문자를 포함하는  데이터  검색
+3. 특정 문자를 포함하는 데이터 검색
 
 SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열%';
 
 ### 데이터 삭제(auto-increment 초기화)
+
 TRUNCATE TABLE table_name;
 
 ### AUTO_INCREMENT 시작 숫자 정하기
+
 ALTER TABLE <table명> AUTO_INCREMENT=<시작 숫자>
 
 ### SubQuery
+
 단일행 서브쿼리
 SELECT <colum명> FROM <table명> WHERE <colum명> = (SELECT SELECT <colum명> FROM <table명> WHERE <조건>)
 
