@@ -19,6 +19,58 @@ Arrays 장점 - 빠른 lookups, push/pop, Ordered 단점 - 느린 inserts, delet
 1. insert => O(1) 2. lookup => O(1) 3. delete => O(1) 4. search O(1)
    메모리의 공간을 많이 사용하기 때문에 충돌이 날수 있음. 충돌이 발생하면 찾기, 삭제하는 등의 시간 복잡도가 O(n)으로 됨.
 
+// Hash Tables 구현
+
+```js
+class HashTable {
+  constructor(size) {
+    this.data = new Array(size);
+    // this.data = [];
+  }
+
+  _hash(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+    }
+    return hash;
+  }
+
+  set(key, value) {
+    let address = this._hash(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value]);
+    return this.data;
+  }
+
+  get(key) {
+    const address = this._hash(key);
+    const currentBucket = this.data[address];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
+      }
+    }
+    return undefined;
+  }
+
+  keys() {
+    const keysArray = [];
+    console.log(this.data.length);
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    return keysArray;
+  }
+}
+```
+
 ### 충돌 대처법
 
 1. 체이닝 - Linked List를 할당하여 해시 충돌이 발생하면 연결리스트로 데이터들을 연결
