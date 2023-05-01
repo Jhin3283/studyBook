@@ -5,7 +5,7 @@
 
 ## Arrays
 
-1. lookup => O(1) 2. push => O(1) 3. insert => O(n) 4. delete => O(n)
+1. lookup => O(1) 2. push => O(1) 3. insert => O(n) 4. delete => O(n) 5. search O(n)
    string => arr로 변경하여 푸는게 일반적으로 좋은데 문제를 한번더 보고 생각 후 작업
 
 static Array - 길이가 정해진 배열 (Java, C#에서의 Array)
@@ -18,8 +18,10 @@ Arrays 장점 - 빠른 lookups, push/pop, Ordered 단점 - 느린 inserts, delet
 
 1. insert => O(1) 2. lookup => O(1) 3. delete => O(1) 4. search O(1)
    메모리의 공간을 많이 사용하기 때문에 충돌이 날수 있음. 충돌이 발생하면 찾기, 삭제하는 등의 시간 복잡도가 O(n)으로 됨.
+   장점 - 빠른 lookups, inserts와 Flexible Keys
+   단점 - 정렬되지 않음, 느린 키 반복(Slow Key iteration)
 
-// Hash Tables 구현
+   // Hash Tables 구현
 
 ```js
 class HashTable {
@@ -78,3 +80,9 @@ class HashTable {
    2-1. 선형 탐색(Linear Probing): 해시충돌 시 다음 버켓, 혹은 몇 개를 건너뛰어 데이터를 삽입
    2-2. 제곱 탐색(Quadratic Probing): 해시충돌 시 제곱만큼 건너뛴 버켓에 데이터를 삽입(1,4,9,16..)
    2-3. 이중 해시(Double Hashing): 해시충돌 시 다른 해시함수를 한 번 더 적용한 결과를 이용
+
+# Linked Lists
+
+element간의 연결을 이용하여 구성된 리스트
+
+1. prepend O(1) 2. append O(i) 3. lookup O(n) 4. insert O(n) 5. delete O(n)
