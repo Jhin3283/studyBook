@@ -1,15 +1,19 @@
-function solution(numbers) {
-    let answer = new Array(numbers.length).fill(-1)
-    let stack = [];
-    for(let i=0; i<numbers.length; i++){
-        console.log(numbers[stack[stack.length-1]], "compare Num")
-        while(stack.length && numbers[stack[stack.length-1]] < numbers[i] ){
-            answer[stack.pop()] = numbers[i];
-            console.log(numbers[i],"Push Num")
-        }
-        stack.push(i)
+function solution(sequence, k) {
+  const answer = [];
+  let [l, r] = [0, 0]
+  let num = sequence[l]
+  while (r < sequence.length){
+    if(num < k){
+        num += sequence[++r]
+    } else if (num > k){
+        num -= sequence[l++]
+    } else {
+        answer.push([l,r])
+        num += sequence[++r]
+        num -= sequence[l++]
     }
-    return answer;
+  }
+  return answer.sort((a,b) => (a[1] - a[0]) - (b[1] - b[0]))[0];
 }
 
-console.log(solution([2, 3, 3, 5]))
+console.log(solution([1, 1, 1, 2, 3, 4, 5], 5));
