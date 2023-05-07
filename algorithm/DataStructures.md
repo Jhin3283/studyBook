@@ -86,3 +86,44 @@ class HashTable {
 element간의 연결을 이용하여 구성된 리스트
 
 1. prepend O(1) 2. append O(i) 3. lookup O(n) 4. insert O(n) 5. delete O(n)
+
+// Linked Lists 구현
+
+```js
+class LinkedList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      next: null,
+    };
+    this.tail = this.head;
+    this.length = 1;
+  }
+  append(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    console.log(newNode);
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
+  prepend(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
+}
+
+let myLinkedList = new LinkedList(10);
+myLinkedList.append(5);
+myLinkedList.append(16);
+myLinkedList.prepend(1);
+```
