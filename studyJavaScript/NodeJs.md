@@ -256,3 +256,11 @@ callback - 다른 함수A의 전달인자로 받는 함수B
 setTimeout(callback, millisecond) - 일정시간 후 함수 실행. arguments: 콜백함수, 콜백함수 실행 전 기다려야 할 시간. return value: 임의의 타이머ID
 setInterval(callback, millisecond) - 일정시간의 간격을 가지고 함수를 반복적으로 실행. arguments: 콜백함수, 반복적으로 함수를 실행시키는 시간 간격. return value: 임의의 타이머ID
 clearInerval(timerId) - 반복 실행중인 타이머를 종료. arguments: timerId. return value: 없음.
+
+# Hoisting
+함수 안에 있는 선언들을 모두 끌어올려서 해당 함수 유효 범위의 최상단에 선언하는 것
+Var 변수 선언과 함수선언문에서는 정상적으로 일어나지만 const/let 변수 선언과 함수표현식에서는 호이스팅이 일어나지만 TDZ에 빠지게 되어 에러 발생시킴
+
+## TDZ
+Temporal Dead Zone의 약자인 TDZ는 변수를 선언 전을 말함.
+let, const, class, constructor() 내부의 super() 등 에서 적용되므로 관리에 신경써야함
