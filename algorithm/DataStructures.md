@@ -81,7 +81,7 @@ class HashTable {
    2-2. 제곱 탐색(Quadratic Probing): 해시충돌 시 제곱만큼 건너뛴 버켓에 데이터를 삽입(1,4,9,16..)
    2-3. 이중 해시(Double Hashing): 해시충돌 시 다른 해시함수를 한 번 더 적용한 결과를 이용
 
-# Linked Lists
+## Linked Lists
 
 element간의 연결을 이용하여 구성된 리스트
 
