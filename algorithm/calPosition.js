@@ -1,4 +1,5 @@
 function calPoint(lat1, lng1, lat2, lng2, rssi) {
+  // rssi를 이용하여 거리 구하기 단위(m)
   function calculateDistance(rssi) {
     var txPower = +59;
     var n = 2;
@@ -11,6 +12,8 @@ function calPoint(lat1, lng1, lat2, lng2, rssi) {
   const calLng = (lng1 * Math.PI) / 180;
 
   const bearing = getAzimuth(lat1, lng1, lat2, lng2);
+
+  // 방위각 구하는 함수
   function getAzimuth(lat1, lon1, lat2, lon2) {
     const dLat = ((lat2 - lat1) * Math.PI) / 180;
     const dLon = ((lon2 - lon1) * Math.PI) / 180;

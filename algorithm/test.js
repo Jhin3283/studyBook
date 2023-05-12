@@ -21,7 +21,6 @@ function calPoint (lat1, lng1, lat2, lng2, rssi){
     var distance = Math.pow(10, (txPower - rssi) / (10 * n));
     return distance.toFixed(2);
   }
-  console.log(calculateDistance(rssi))
 const R = 6378.1;
 const d = (calculateDistance(rssi)/1000) / R;
 const calLat = lat1 * Math.PI/180;
@@ -40,10 +39,10 @@ function getAzimuth(lat1, lon1, lat2, lon2) {
 
   let azimuth = Math.atan2(y, x) * 180 / Math.PI;
   if (azimuth < 0) azimuth += 360;
-
+  azimuth -= 5
+  // Math.random(0, 5)
   return azimuth;
 }
-console.log(bearing)
 let newLat = Math.asin(Math.sin(calLat) * Math.cos(d) + Math.cos(calLat) * Math.sin(d) * Math.cos(bearing * Math.PI/180));
 let newLng = calLng + Math.atan2(Math.sin(bearing * Math.PI/180) * Math.sin(d) * Math.cos(calLat), Math.cos(d) - Math.sin(calLat) * Math.sin(newLat));
 
