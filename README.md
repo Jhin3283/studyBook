@@ -1,3 +1,3 @@
 # studyBook
 
-Now studying... Nest JS, Algorithm, Mongoose
+Now studying... Nest JS, Algorithm
