@@ -11,11 +11,7 @@ function solution(s, skip, index) {
     let length = alpabat.length
     for(let i=0; i<s.length; i++){
       let idx = alpabat.indexOf(s[i])+index
-      // if(idx + index < length){
         answer += alpabat[idx % length]
-      // } else {
-      //   answer += alpabat[(idx + index - length)]
-      // }
     }
     return answer;
   }
