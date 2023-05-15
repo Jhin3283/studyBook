@@ -1,20 +1,24 @@
-function solution(wallpaper) {
-  var answer = [];
-  let xAxis = [];
-  let yAxis = [];
-  for(let i=0; i<wallpaper.length; i++){
-    for(let j=0; j<wallpaper[0].length; j++){
-      if(wallpaper[i][j] === "#"){
-        xAxis.push(i)
-        yAxis.push(j)
-      }
+function solution(s, skip, index) {
+  var answer = '';
+  let alpabat = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
+  ,"r","s","t","u","v","w","x","y","z"]
+  for(let i=0; i<skip.length; i++){
+    let idx = alpabat.indexOf(skip[i])
+    if(idx !== -1){
+      alpabat.splice(idx,1)
     }
   }
-  xAxis.sort((a,b)=> a-b)
-  yAxis.sort((a,b)=> a-b)
-  answer.push(xAxis[0],yAxis[0],xAxis[xAxis.length-1]+1,yAxis[yAxis.length-1]+1)
-  console.log(answer)
+  let length = alpabat.length
+  for(let i=0; i<s.length; i++){
+    let idx = alpabat.indexOf(s[i])+index
+    console.log(idx - length)
+    console.log(idx % length)
+    // if(idx + index <= length){
+      answer += alpabat[idx % length]
+    // } else {
+    //   answer += alpabat[(idx + index - length)]
+    // }
+  }
   return answer;
 }
-
-solution([".##...##.", "#..#.#..#", "#...#...#", ".#.....#.", "..#...#..", "...#.#...", "....#...."])
+solution("uvwxyz", "wbqd", 5)
