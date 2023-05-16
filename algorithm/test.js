@@ -1,22 +1,21 @@
-function solution(s, skip, index) {
-  var answer = '';
-  let alpabat = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
-  ,"r","s","t","u","v","w","x","y","z"]
-  for(let i=0; i<skip.length; i++){
-    let idx = alpabat.indexOf(skip[i])
-    if(idx !== -1){
-      alpabat.splice(idx,1)
+function solution(targets) {
+  var answer = 0;
+  targets.sort((a, b) => {
+    if (a[1] == b[1]) {
+        return a[0] - b[0];
     }
-  }
-  let length = alpabat.length
-  for(let i=0; i<s.length; i++){
-    let idx = alpabat.indexOf(s[i])+index
-    // if(idx + index < length){
-      answer += alpabat[idx % length]
-    // } else {
-    //   answer += alpabat[(idx + index - length)]
-    // }
+    return a[1] - b[1];
+});
+  let max = -1
+  for(let i=0; i<targets.length; i++){
+    let left = targets[i][0];
+    let right = targets[i][1];
+    if(left >= max){
+      answer++
+      max = right
+    }
   }
   return answer;
 }
-solution("uvwxyz", "wbqd", 5)
+
+solution([[4, 5], [4, 8], [10, 14], [11, 13], [5, 12], [3, 7], [1, 4]])
