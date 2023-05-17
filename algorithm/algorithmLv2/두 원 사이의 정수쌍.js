@@ -33,7 +33,7 @@ function solution(r1, r2) {
     const max = Math.sqrt(r * r - x * x);
     const maxToInt = parseInt(max);
     if (bool && max - maxToInt == 0) {
-      // r1에서
+      // r1에서 max랑 피타고라스 정리로 계산된 값이 같으면 포함해줘야 되기때문에 -1해서 포함시켜줌
         return maxToInt - 1;
     } else {
         return maxToInt;
