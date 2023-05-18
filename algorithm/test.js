@@ -1,41 +1,31 @@
-// function solution(r1, r2) {
-//   let answer = 0;
-//   for(let i=1; i<=r2; i++){
-//     for(let j=0; j<=r2; j++){
-//       if(r2 ** 2 >= i ** 2 + j ** 2 && i ** 2 + j ** 2 >= r1 ** 2){
-//         answer+=4
-//       }
-//     }
-//   }
-//   return answer;
-// }
-
-// 시간복잡도 O(n)으로 변경 피타고라스의 정리이용
-
-function solution(r1, r2) {
-  let answer = 0;
-  for (let i=1; i <= r2; i++) {
-       if (i < r1) {
-          answer += getMaxY(i, r2, false) - getMaxY(i, r1, true);
-      } else {
-          answer += getMaxY(i, r2, false);
-      }
+function solution(plans) {
+  var answer = [];
+  plans.map((el) => {
+    let dum = el[1].split(":")
+    el[1] = Number(dum[0])*60 + Number(dum[1])})
+    plans.sort((a,b) => a[1] - b[1])
+    let stack = [plans.shift()];
+  for(let i=0; i<plans.length; i++){
+    let data;
+    if(stack.length === 0){
+      data = [0,Infinity,0];
+    } else {
+      data = stack[stack.length -1]
+    }
+    if(plans[i][1] >= data[1] + Number(data[2])){
+      answer.push(stack.pop()[0])
+      answer.push(plans[i][0])
+    } else {
+      stack.push(plans[i])
+    }
   }
-  answer *= 4;
-  answer += (r2 - r1 + 1) * 4;
+  if(stack.length !== 0){
+    for(let j=stack.length; j>0; j--){
+      answer.push(stack.pop()[0])
+    }
+  }
+  console.log(stack)
+  console.log(answer)
   return answer;
 }
-
-// X좌표에 들어갈수 있는 최대 Y 좌표 갯수
-function getMaxY(x, r, bool) {
-  const max = Math.sqrt(r * r - x * x);
-  const maxToInt = parseInt(max);
-  if (bool && max - maxToInt == 0) {
-    // r1에서 max랑 피타고라스 정리로 계산된 값이 같으면 포함해줘야 되기때문에 -1해서 포함시켜줌
-      return maxToInt - 1;
-  } else {
-      return maxToInt;
-  }
-}
-
-console.log(solution(2, 3))
+solution(	[["science", "12:40", "50"], ["music", "12:20", "40"], ["history", "14:00", "30"], ["computer", "12:30", "100"]])
