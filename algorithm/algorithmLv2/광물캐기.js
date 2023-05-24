@@ -18,7 +18,7 @@ const solution = (picks, minerals) => {
   arr
     .sort((a, b) => b[2] - a[2])
     .map((v) => {
-      console.log(v)
+      console.log(v);
       if (picks[0] > 0) return picks[0]--, (answer += v[0]);
       if (picks[1] > 0) return picks[1]--, (answer += v[1]);
       if (picks[2] > 0) return picks[2]--, (answer += v[2]);
@@ -26,19 +26,3 @@ const solution = (picks, minerals) => {
   return answer;
 };
 
-solution(
-  [0, 1, 1],
-  [
-    "diamond",
-    "diamond",
-    "iron",
-    "iron",
-    "diamond",
-    "diamond",
-    "diamond",
-    "diamond",
-    "diamond",
-    "iron",
-    "diamond",
-  ]
-);
