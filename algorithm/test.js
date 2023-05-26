@@ -1,44 +1,47 @@
-const solution = (picks, minerals) => {
+function solution(maps) {
   var answer = 0;
-  let len = Math.ceil(minerals.length / 5);
-  let maxLen = picks.reduce((a, b) => a + b);
-  let arr = [];
-  if (maxLen === 0) return 0;
-  minerals = minerals.splice(0, maxLen * 5);
-
-  for (let a = 0; a < len; a++) {
-    let obj = { d: 0, i: 0, s: 0 };
-    minerals.splice(0, 5).map((v) => obj[v[0]]++);
-    arr.push([
-      obj.d + obj.i + obj.s,
-      obj.d * 5 + obj.i + obj.s,
-      obj.d * 25 + obj.i * 5 + obj.s,
-    ]);
+  let map = [];
+  let mid = false;
+  let end = false;
+  maps.map((el) => {
+    map.push(el.split(""));
+  });
+  let xAxis = [-1, 1, 0, 0];
+  let yAxis = [0, 0, 1, -1];
+  let now = [];
+  for (let i = 0; i < map.length; i++) {
+    for (let j = 0; j < map[0].length; j++) {
+      if (map[i][j] === "S") {
+        now = [i, j];
+      }
+    }
   }
-  arr
-    .sort((a, b) => b[2] - a[2])
-    .map((v) => {
-      console.log(v)
-      if (picks[0] > 0) return picks[0]--, (answer += v[0]);
-      if (picks[1] > 0) return picks[1]--, (answer += v[1]);
-      if (picks[2] > 0) return picks[2]--, (answer += v[2]);
-    });
+  while (end === false) {
+    console.log(end);
+    let [x, y] = now;
+    for (let i = 0; i < 4; i++) {
+      let xn = x + xAxis[i];
+      let yn = y + yAxis[i];
+      if (xn > 0 && yn > 0 && xn < map.length && yn < map[0].length) {
+        if (map[xn][yn] !== "X") {
+          if (map[xn][yn] === "L") {
+            mid = true;
+            answer++;
+          } else if (map[xn][yn] === "E" && mid === true) {
+            end = true;
+            answer++;
+            break;
+          }
+          now = [xn, yn];
+          answer++;
+          map[xn][yn] = "X";
+        }
+      }
+    }
+    if (end === true) break;
+  }
+  console.log(answer);
   return answer;
-};
+}
 
-solution(
-  [0, 1, 1],
-  [
-    "diamond",
-    "diamond",
-    "iron",
-    "iron",
-    "diamond",
-    "diamond",
-    "diamond",
-    "diamond",
-    "diamond",
-    "iron",
-    "diamond",
-  ]
-);
+solution(["SOOOL", "XXXXO", "OOOOO", "OXXXX", "OOOOE"]);
