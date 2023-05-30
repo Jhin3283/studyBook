@@ -38,5 +38,3 @@ function solution(maps) {
   }
   return -1;
 }
-
-console.log(solution(["SOOOL", "XXXXO", "OOOOO", "OXXXX", "OOOOE"]));
