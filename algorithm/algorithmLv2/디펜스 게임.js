@@ -20,5 +20,3 @@ function solution(n, k, enemy) {
   }
   return left - 1;
 }
-
-console.log(solution(2, 2, [3, 3, 3, 3]));
