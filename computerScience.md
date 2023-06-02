@@ -29,12 +29,15 @@ SQL(Structured Query Language) 데이터베이스는 테이블을 사용하여 �
 # 부호체계
 
 ## ASCII
+
 American Standard Code for Information Interchange의 약자로 7비트, 128개의 고유한 값만 사용.
 컴퓨터의 기본 저장 단위는 1바이트(8비트)이고 ASCII의 1비트는 통신 에러 검출을 위해 사용됨
 
 ## ANSI
+
 8비트로 확장된 아스키 코드로, 256개의 고유한 값을 이용가능.
 
 ## Unicode
+
 2byte (2^16 = 65536)로 ANSI에도 모자란 언어를 위해 개발됨.
 문자 인코딩 형태(character encoding form, CEF)는 특정한 문자 집합 안의 문자들을 컴퓨터 시스템에서 사용할 목적으로 일정한 범위 안의 정수(코드값)들로 변환하는 방법이고, 유니코드 코드 포인트를 8비트 숫자의 집합으로 나타내는 UTF-8이나, 16비트의 숫자의 집합으로 나타내는 UTF-16 등이 포함
