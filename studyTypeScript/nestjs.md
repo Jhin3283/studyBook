@@ -37,3 +37,11 @@ Options
 --collection [collectionName] - 스키메틱 컬렉션을 지정합니다. 스키메틱이 포함된 설치된 npm 패키지의 패키지 이름을 사용합니다. 별칭: -c
 --spec - 스펙 파일 생성 적용 (기본값)
 --no-spec - 스펙 파일 생성 비활성화
+
+## Nest 구성요소
+
+1. Pipe - request에 포함된 데이터가 유효한지 확인
+2. Guard - 유저의 권한을 확인
+3. Controller - 요청을 특정 기능으로 Route 해주는 역활
+4. Service - Business 로직 실행
+5. Repository - Database에 접근
