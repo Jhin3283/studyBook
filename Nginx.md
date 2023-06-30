@@ -44,6 +44,10 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 }
 
+## Nginx 용량크기 설정
+
+HTTP {}내 client_max_body_size 20M;
+
 ## build 파일 연결
 
 server {
