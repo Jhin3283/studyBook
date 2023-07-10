@@ -70,16 +70,3 @@ server_name admin.leo-wifree.com;
 
 }
 }
-
-## Let's encrypt 발급 방법
-
-$ apt-get update
-$ sudo apt-get install certbot
-$ apt-get install python3-certbot-nginx
-
-$ sudo certbot --nginx -d example.com -d www.example.com
-
-## Let's encrypt 인증서 자동 갱신
-
-$ crontab -e
-0 12 \* \* \* /usr/bin/certbot renew --quiet
