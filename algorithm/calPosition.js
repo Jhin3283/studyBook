@@ -1,9 +1,9 @@
 function calPoint(lat1, lng1, lat2, lng2, rssi) {
   // rssi를 이용하여 거리 구하기 단위(m)
   function calculateDistance(rssi) {
-    var txPower = +59;
+    var txPower = -17;
     var n = 2;
-    var distance = Math.pow(10, (txPower - rssi) / (10 * n));
+    var distance = Math.pow(10, (txPower + rssi) / (10 * n));
     return distance.toFixed(2);
   }
   const R = 6378.1;
@@ -45,3 +45,10 @@ function calPoint(lat1, lng1, lat2, lng2, rssi) {
   newLng = (newLng * 180) / Math.PI;
   return [newLat, newLng];
 }
+function calculateDistance(rssi) {
+  var txPower = -17;
+  var n = 2;
+  var distance = Math.pow(10, rssi / (10 * n));
+  return distance.toFixed(2);
+}
+console.log(calculateDistance(40));
