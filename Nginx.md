@@ -14,6 +14,7 @@ sudo nginx -t
 
 ## Port에 연결
 
+```
 server {
 listen 80;
 server_name leo-wifree.com;
@@ -43,6 +44,7 @@ proxy_set_header X-Real-IP $remote_addr;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 }
+```
 
 ## Nginx 용량크기 설정
 
