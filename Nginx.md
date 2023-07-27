@@ -2,7 +2,9 @@
 
 ## Nginx 제시작
 
+```
 sudo service nginx restart
+```
 
 ## Nginx 설정
 
@@ -10,7 +12,9 @@ sudo service nginx restart
 
 ## Nginx 구성파일 유효성 검사
 
+```
 sudo nginx -t
+```
 
 ## Port에 연결
 
@@ -48,10 +52,15 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
 ## Nginx 용량크기 설정
 
-HTTP {}내 client_max_body_size 20M;
+HTTP { }내
+
+```
+client_max_body_size 20M;
+```
 
 ## build 파일 연결
 
+```
 server {
 listen 80;
 server_name admin.leo-wifree.com;
@@ -72,3 +81,4 @@ server_name admin.leo-wifree.com;
 
 }
 }
+```
