@@ -2,7 +2,9 @@
 
 ## Nginx 제시작
 
+```
 sudo service nginx restart
+```
 
 ## Nginx 설정
 
@@ -10,10 +12,13 @@ sudo service nginx restart
 
 ## Nginx 구성파일 유효성 검사
 
+```
 sudo nginx -t
+```
 
 ## Port에 연결
 
+```
 server {
 listen 80;
 server_name leo-wifree.com;
@@ -43,13 +48,19 @@ proxy_set_header X-Real-IP $remote_addr;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 }
+```
 
 ## Nginx 용량크기 설정
 
-HTTP {}내 client_max_body_size 20M;
+HTTP { }내
+
+```
+client_max_body_size 20M;
+```
 
 ## build 파일 연결
 
+```
 server {
 listen 80;
 server_name admin.leo-wifree.com;
@@ -70,16 +81,4 @@ server_name admin.leo-wifree.com;
 
 }
 }
-
-## Let's encrypt 발급 방법
-
-$ apt-get update
-$ sudo apt-get install certbot
-$ apt-get install python3-certbot-nginx
-
-$ sudo certbot --nginx -d example.com -d www.example.com
-
-## Let's encrypt 인증서 자동 갱신
-
-$ crontab -e
-0 12 \* \* \* /usr/bin/certbot renew --quiet
+```
