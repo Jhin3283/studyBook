@@ -88,3 +88,7 @@ CMD ["node", "server.js"]
 풀: docker pull {userName}/{projectName}:{tag}
 로그인: docker login
 시작: docker run -d -p 80:{포트} {userName}/{projectName}:{tag}
+
+실행중 컨테이너 확인: docker ps -a
+이미지 삭제: docker rmi {image ID}
+컨테이너 삭제: docker rm {continer ID}
