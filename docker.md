@@ -91,6 +91,6 @@ CMD ["node", "server.js"]
 
 실행중 컨테이너 확인: docker ps -a
 이미지 삭제: docker rmi {image ID}
-모든 이미지 삭제: docker rmi $(docker images -q)
+모든 이미지 삭제: docker rmi -f $(docker images -q)
 컨테이너 삭제: docker rm {continer ID}
 모든 컨테이너 삭제: docker rm -f $(docker ps -qa)
